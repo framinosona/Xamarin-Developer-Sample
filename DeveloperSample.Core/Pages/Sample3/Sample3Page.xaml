@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<base:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DeveloperSample.Core.Pages.Sample3"
+             xmlns:base="clr-namespace:DeveloperSample.Core.Pages.BasePageFiles"
+             x:Class="DeveloperSample.Core.Pages.Sample3.Sample3Page">
+    <ContentPage.Content>
+        <local:Sample3DragAndDropContainer>
+            <AbsoluteLayout>
+                
+                <local:Sample3DragAndDropReceiverView
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds=".1,.1,.2,.3"/>
+                <local:Sample3DragAndDropReceiverView
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds=".5,.1,.2,.3"/>
+                <local:Sample3DragAndDropReceiverView
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds=".9,.1,.2,.3"/>
+                
+                
+                <local:Sample3DragAndDropSenderView
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds=".1,.9,.2,.3"
+                Color="BlueViolet"/>
+                <local:Sample3DragAndDropSenderView
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds=".5,.9,.2,.3"
+                Color="SeaGreen"/>
+                <local:Sample3DragAndDropSenderView
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds=".9,.9,.2,.3"
+                Color="Firebrick"/>
+                
+            </AbsoluteLayout>
+        </local:Sample3DragAndDropContainer>
+    </ContentPage.Content>
+</base:BaseContentPage>

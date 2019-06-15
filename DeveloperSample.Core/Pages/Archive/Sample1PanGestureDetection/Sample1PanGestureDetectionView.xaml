@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Name="this"
+             BackgroundColor="Black"
+       Opacity=".8"
+             x:Class="DeveloperSample.Core.Pages.Sample1PanGestureDetection.Sample1PanGestureDetectionView">
+            <StackLayout
+            VerticalOptions="Center">
+                    <Label FontSize="22"
+                           TextColor="White">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="GestureId : " />
+                                    <Span d:Text="-1"
+                                          Text="{Binding Source={x:Reference this}, Path=GestureId}"
+                                          FontSize="22"
+                                          FontAttributes="Bold" />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                
+                    <Label FontSize="22"
+                           TextColor="White">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Status : " />
+                                    <Span d:Text="Unknown"
+                                          Text="{Binding Source={x:Reference this}, Path=StatusText}"
+                                          FontSize="22"
+                                          FontAttributes="Bold" />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                
+                    <Label FontSize="22"
+                           TextColor="White">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="TotalX : " />
+                                    <Span d:Text="0"
+                                          Text="{Binding Source={x:Reference this}, Path=TotalX}"
+                                          FontSize="22"
+                                          FontAttributes="Bold" />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                
+                    <Label FontSize="22"
+                           TextColor="White">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="TotalY : " />
+                                    <Span d:Text="0"
+                                          Text="{Binding Source={x:Reference this}, Path=TotalY}"
+                                          FontSize="22"
+                                          FontAttributes="Bold" />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+            </StackLayout>
+</Frame>

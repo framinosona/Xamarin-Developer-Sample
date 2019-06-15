@@ -1,0 +1,50 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+  
+  <PropertyGroup>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Configurations>Debug;Release;Design</Configurations>
+    <Platforms>AnyCPU;iPhone;iPhoneSimulator</Platforms>
+    <OutputPath>bin/$(Platform)/$(Configuration)</OutputPath>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Design' ">
+    <ConfigurationGroup>Debug</ConfigurationGroup>
+    <DefineConstants>DESIGN;TRACE</DefineConstants>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DefineConstants>RELEASE</DefineConstants>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <!-- Hide temp ~files -->
+  <PropertyGroup>
+    <DefaultItemExcludes>$(DefaultItemExcludes);**/*.*~;.DS_Store</DefaultItemExcludes>
+  </PropertyGroup>
+
+    <!-- Hide archived -->
+    <ItemGroup>
+        <EmbeddedResource Remove="**\Archive\**" />
+        <EmbeddedResource Remove="**\Archive\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Remove="**\Archive\**" />
+        <Compile Remove="**\Archive\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="**\Archive\**" />
+        <None Remove="**\Archive\**" />
+    </ItemGroup>
+</Project> 

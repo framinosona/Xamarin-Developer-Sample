@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Name="this"
+             BackgroundColor="Black"
+            Opacity=".8"
+             x:Class="DeveloperSample.Core.Pages.Sample2MoveView.Sample2MoveViewView">
+            <StackLayout
+            VerticalOptions="Center">
+                    <Label FontSize="12"
+                           TextColor="White">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span d:Text="Unknown"
+                                          Text="{Binding Source={x:Reference this}, Path=StatusText}"
+                                          FontSize="12"
+                                          FontAttributes="Bold" />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                
+                    <Label FontSize="12"
+                           TextColor="White">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="X : " />
+                                    <Span d:Text="0"
+                                          Text="{Binding Source={x:Reference this}, Path=TotalX}"
+                                          FontSize="12"
+                                          FontAttributes="Bold" />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                
+                    <Label FontSize="12"
+                           TextColor="White">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <FormattedString.Spans>
+                                    <Span Text="Y : " />
+                                    <Span d:Text="0"
+                                          Text="{Binding Source={x:Reference this}, Path=TotalY}"
+                                          FontSize="12"
+                                          FontAttributes="Bold" />
+                                </FormattedString.Spans>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+            </StackLayout>
+</Frame>

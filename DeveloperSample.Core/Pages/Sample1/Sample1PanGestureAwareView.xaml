@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       BackgroundColor="Black"
+       Opacity=".8"
+       x:Class="DeveloperSample.Core.Pages.Sample1.Sample1PanGestureAwareView">
+    <Frame.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize"
+                        Value="22" />
+                <Setter Property="TextColor"
+                        Value="White" />
+            </Style>
+            <Style TargetType="Span"
+                   x:Key="BoldSpan">
+                <Setter Property="FontAttributes"
+                        Value="Bold" />
+                <Setter Property="FontSize"
+                        Value="22" />
+            </Style>
+        </ResourceDictionary>
+    </Frame.Resources>
+    <StackLayout VerticalOptions="Center">
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="GestureId : " />
+                        <Span x:Name="GestureIdLabel"
+                              Text="0"
+                              Style="{DynamicResource BoldSpan}" />
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Status : " />
+                        <Span Text="Unknown"
+                              x:Name="StatusLabel"
+                              Style="{DynamicResource BoldSpan}" />
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="TotalX : " />
+                        <Span Text="0"
+                              x:Name="TotalXLabel"
+                              Style="{DynamicResource BoldSpan}" />
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="TotalY : " />
+                        <Span Text="0"
+                              x:Name="TotalYLabel"
+                              Style="{DynamicResource BoldSpan}" />
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+</Frame>

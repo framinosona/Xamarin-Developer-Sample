@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeveloperSample.Core.Controls.ManikinListItem"
+             HorizontalOptions="Fill"
+             WidthRequest="100"
+             VerticalOptions="Fill" 
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+    <ContentView.Content>
+        <yummy:PancakeView CornerRadius="10"
+                           BorderColor="DarkSlateGray"
+                           BorderThickness="2"
+                           BackgroundGradientAngle="90"
+                           BackgroundGradientStartColor="BurlyWood"
+                           BackgroundGradientEndColor="Honeydew">
+        </yummy:PancakeView>
+    </ContentView.Content>
+</ContentView>

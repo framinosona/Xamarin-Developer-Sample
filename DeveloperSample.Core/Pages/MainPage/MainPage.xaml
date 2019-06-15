@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<basePageFiles:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:basePageFiles="clr-namespace:DeveloperSample.Core.Pages.BasePageFiles;assembly=DeveloperSample.Core"
+             mc:Ignorable="d"
+             mvvm:ViewModelLocator.AutowireViewModel="True"
+             x:Class="DeveloperSample.Core.Pages.MainPage.MainPage"
+             Title="{Binding Title}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#2b2d41"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="Padding" Value="10"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout
+            Margin="10"
+            Spacing="10">
+            <Button Text="Sample 1" Command="{Binding NavigateToSample1}"/>
+            <Button Text="Sample 2" Command="{Binding NavigateToSample2}"/>
+            <Button Text="Sample 3" Command="{Binding NavigateToSample3}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</basePageFiles:BaseContentPage>
