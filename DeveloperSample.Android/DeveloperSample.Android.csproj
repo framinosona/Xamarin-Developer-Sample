@@ -16,7 +16,7 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
   </PropertyGroup>
@@ -42,6 +42,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
   </PropertyGroup>
+  <!-- System references -->
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="System" />
@@ -51,6 +52,7 @@
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
+  <!-- Nuget package references -->
   <ItemGroup>
     <PackageReference Include="NLog" Version="4.6.5" />
     <PackageReference Include="Prism.Core" Version="7.1.0.431" />
@@ -71,9 +73,7 @@
     <PackageReference Include="Xamarin.Forms.InputKit" Version="3.0.11" />
     <PackageReference Include="Xamarin.Forms.PancakeView" Version="1.0.21" />
     <PackageReference Include="Xamarin.Forms.Plugin.HorizontalList" Version="1.0.2" />
-    <PackageReference Include="Xamarin.Forms.Visual.Material">
-      <Version>4.0.0.497661</Version>
-    </PackageReference>
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.0.0.497661" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -110,6 +110,7 @@
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
   </ItemGroup>
+  <!-- Project references -->
   <ItemGroup>
     <ProjectReference Include="..\DeveloperSample.Core\DeveloperSample.Core.csproj">
       <Project>{C07297C8-BFC2-4503-B692-81F5BDCA0F92}</Project>

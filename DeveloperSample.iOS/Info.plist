@@ -25,7 +25,7 @@
     <key>CFBundleDisplayName</key>
     <string>DeveloperSample</string>
     <key>CFBundleIdentifier</key>
-    <string>com.laerdalmedical.DeveloperSample</string>
+    <string>com.framinosona.DeveloperSample</string>
     <key>CFBundleVersion</key>
     <string>1.0</string>
     <key>UILaunchStoryboardName</key>

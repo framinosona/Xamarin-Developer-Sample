@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
              x:Class="DeveloperSample.Core.Pages.Sample3.Sample3DragAndDropSenderView"
-             x:Name="self">
+             x:Name="Self">
     <ContentView.Content>
         <Frame x:Name="MainFrame"
-               BackgroundColor="{Binding Source={x:Reference self}, Path=Color}"
-               d:BackgroundColor="MidnightBlue"/>
+               BackgroundColor="{Binding Source={x:Reference Self}, Path=Color}"/>
     </ContentView.Content>
 </ContentView>
