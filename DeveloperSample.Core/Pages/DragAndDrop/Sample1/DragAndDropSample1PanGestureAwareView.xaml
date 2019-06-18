@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Frame
-                       xmlns="http://xamarin.com/schemas/2014/forms"
-                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                       BackgroundColor="Black"
-                       Opacity=".8"
-                       x:Class="DeveloperSample.Core.Pages.Sample2.Sample2DragAndDroppableView">
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       BackgroundColor="Black"
+       Opacity=".8"
+       x:Class="DeveloperSample.Core.Pages.DragAndDrop.Sample1.DragAndDropSample1PanGestureAwareView">
     <Frame.Resources>
         <ResourceDictionary>
             <Style TargetType="Label">
@@ -23,6 +22,18 @@
         </ResourceDictionary>
     </Frame.Resources>
     <StackLayout VerticalOptions="Center">
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="GestureId : " />
+                        <Span x:Name="GestureIdLabel"
+                              Text="0"
+                              Style="{DynamicResource BoldSpan}" />
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
         <Label>
             <Label.FormattedText>
                 <FormattedString>
@@ -54,30 +65,6 @@
                         <Span Text="TotalY : " />
                         <Span Text="0"
                               x:Name="TotalYLabel"
-                              Style="{DynamicResource BoldSpan}" />
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-        <Label>
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="ViewX : " />
-                        <Span Text="0"
-                              x:Name="ViewXLabel"
-                              Style="{DynamicResource BoldSpan}" />
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-        <Label>
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="ViewY : " />
-                        <Span Text="0"
-                              x:Name="ViewYLabel"
                               Style="{DynamicResource BoldSpan}" />
                     </FormattedString.Spans>
                 </FormattedString>

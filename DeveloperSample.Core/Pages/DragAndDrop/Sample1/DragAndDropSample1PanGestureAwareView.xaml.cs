@@ -1,16 +1,17 @@
 using System;
 using System.ComponentModel;
+using System.Globalization;
 using Xamarin.Forms;
 
-namespace DeveloperSample.Core.Pages.Sample1
+namespace DeveloperSample.Core.Pages.DragAndDrop.Sample1
 {
     [DesignTimeVisible(true)]
-    public partial class Sample1PanGestureAwareView
+    public partial class DragAndDropSample1PanGestureAwareView
     {
 
         public PanGestureRecognizer PanGestureRecognizer { get; set; }
 
-        public Sample1PanGestureAwareView()
+        public DragAndDropSample1PanGestureAwareView()
         {
             InitializeComponent();
 
@@ -26,8 +27,8 @@ namespace DeveloperSample.Core.Pages.Sample1
         {
             StatusLabel.Text = e.StatusType.ToString();
             GestureIdLabel.Text = e.GestureId.ToString();
-            TotalXLabel.Text = Math.Round(e.TotalX, 1).ToString();
-            TotalYLabel.Text = Math.Round(e.TotalY, 1).ToString();
+            TotalXLabel.Text = Math.Round(e.TotalX, 1).ToString(CultureInfo.InvariantCulture);
+            TotalYLabel.Text = Math.Round(e.TotalY, 1).ToString(CultureInfo.InvariantCulture);
         }
     }
 }

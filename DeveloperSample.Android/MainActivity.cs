@@ -6,7 +6,6 @@ using DeveloperSample.Core;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Platform = Xamarin.Essentials.Platform;
-using Resource = DeveloperSample.Droid.Resources.Resource;
 
 namespace DeveloperSample.Droid
 {

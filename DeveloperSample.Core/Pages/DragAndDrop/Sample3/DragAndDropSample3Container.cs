@@ -1,21 +1,16 @@
-using System;
-using Xamarin.Forms;
-using System.Collections.Generic;
-using DeveloperSample.Core.Pages.BasePageFiles;
 using System.Linq;
+using DeveloperSample.Core.Pages.BasePageFiles;
+using Xamarin.Forms;
 
-namespace DeveloperSample.Core.Pages.Sample3
+namespace DeveloperSample.Core.Pages.DragAndDrop.Sample3
 {
-    public class Sample3DragAndDropContainer : Grid
+    public class DragAndDropSample3Container : Grid
     {
-        public Sample3DragAndDropContainer()
-        {
-        }
 
         public void UpdateHoverStatuses()
         {
-            var allReceivers = this.GetAllChildrenOfType<Sample3DragAndDropReceiverView>();
-            var allSenders = this.GetAllChildrenOfType<Sample3DragAndDropSenderView>();
+            var allReceivers = this.GetAllChildrenOfType<DragAndDropSample3ReceiverView>();
+            var allSenders = this.GetAllChildrenOfType<DragAndDropSample3SenderView>();
 
             foreach (var receiver in allReceivers)
             {
@@ -33,9 +28,9 @@ namespace DeveloperSample.Core.Pages.Sample3
         }
 
 
-        public void SenderDropped(Sample3DragAndDropSenderView sender)
+        public void SenderDropped(DragAndDropSample3SenderView sender)
         {
-            var allReceivers = this.GetAllChildrenOfType<Sample3DragAndDropReceiverView>();
+            var allReceivers = this.GetAllChildrenOfType<DragAndDropSample3ReceiverView>();
 
             foreach (var receiver in allReceivers)
             {

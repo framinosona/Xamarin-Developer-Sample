@@ -18,15 +18,32 @@
                 <Setter Property="TextColor" Value="White"/>
                 <Setter Property="Padding" Value="10"/>
             </Style>
+            <Style TargetType="Label" x:Key="TitleLabelStyle">
+                <Setter Property="TextColor" Value="#2b2d41"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontSize" Value="22"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
+            <Style TargetType="Frame" x:Key="SeparatorStyle">
+                <Setter Property="HeightRequest" Value="1"/>
+                <Setter Property="BackgroundColor" Value="#2b2d41"/>
+                <Setter Property="Margin" Value="20"/>
+                <Setter Property="Padding" Value="0"/>
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout
             Margin="10"
             Spacing="10">
-            <Button Text="Sample 1" Command="{Binding NavigateToSample1}"/>
-            <Button Text="Sample 2" Command="{Binding NavigateToSample2}"/>
-            <Button Text="Sample 3" Command="{Binding NavigateToSample3}"/>
+            <Label Text="Drag and Drop Samples" Style="{StaticResource TitleLabelStyle}"/>
+            <Button Text="Sample 1" Command="{Binding NavigateToDragAndDropSample1}"/>
+            <Button Text="Sample 2" Command="{Binding NavigateToDragAndDropSample2}"/>
+            <Button Text="Sample 3" Command="{Binding NavigateToDragAndDropSample3}"/>
+            <Frame Style="{StaticResource SeparatorStyle}"/>
+            <Label Text="Color Samples" Style="{StaticResource TitleLabelStyle}"/>
+            <Button Text="Sample 1" Command="{Binding NavigateToColorSample1}"/>
         </StackLayout>
     </ContentPage.Content>
 </basePageFiles:BaseContentPage>

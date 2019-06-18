@@ -1,13 +1,14 @@
 ﻿using DeveloperSample.Core.Helpers;
+using DeveloperSample.Core.Pages.Colors.Sample1;
+using DeveloperSample.Core.Pages.DragAndDrop.Sample1;
+using DeveloperSample.Core.Pages.DragAndDrop.Sample2;
+using DeveloperSample.Core.Pages.DragAndDrop.Sample3;
 using DeveloperSample.Core.Pages.MainPage;
 using Prism;
 using Prism.Ioc;
 using Prism.Unity;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using DeveloperSample.Core.Pages.Sample1;
-using DeveloperSample.Core.Pages.Sample2;
-using DeveloperSample.Core.Pages.Sample3;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace DeveloperSample.Core
@@ -36,9 +37,10 @@ namespace DeveloperSample.Core
 
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage>();
-            containerRegistry.RegisterForNavigation<Sample1Page>();
-            containerRegistry.RegisterForNavigation<Sample2Page>();
-            containerRegistry.RegisterForNavigation<Sample3Page>();
+            containerRegistry.RegisterForNavigation<DragAndDropSample1Page>();
+            containerRegistry.RegisterForNavigation<DragAndDropSample2Page>();
+            containerRegistry.RegisterForNavigation<DragAndDropSample3Page>();
+            containerRegistry.RegisterForNavigation<ColorSample1Page>();
         }
 
         protected override async void OnInitialized()

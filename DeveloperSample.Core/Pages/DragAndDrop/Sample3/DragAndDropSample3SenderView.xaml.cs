@@ -1,17 +1,12 @@
 using DeveloperSample.Core.Pages.BasePageFiles;
-using System;
-using System.Collections.Generic;
 using Xamarin.Forms;
-using DeveloperSample.Core.Helpers;
-using System.Runtime.CompilerServices;
 using Xamarin.Forms.Xaml;
 
-namespace DeveloperSample.Core.Pages.Sample3
+namespace DeveloperSample.Core.Pages.DragAndDrop.Sample3
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Sample3DragAndDropSenderView : ContentView
+    public partial class DragAndDropSample3SenderView : ContentView
     {
-
         #region Color
         public Color Color
         {
@@ -22,24 +17,22 @@ namespace DeveloperSample.Core.Pages.Sample3
         public static readonly BindableProperty ColorProperty = BindableProperty.Create(
             nameof(Color),
             typeof(Color),
-            typeof(Sample3DragAndDropSenderView),
+            typeof(DragAndDropSample3SenderView),
             Color.Blue,
             propertyChanged: OnColorChanged);
 
         private static void OnColorChanged(BindableObject bindable, object oldValue, object newValue)
         {
-            if (bindable is Sample3DragAndDropSenderView dropSenderView)
+            if (bindable is DragAndDropSample3SenderView dropSenderView)
                 if (newValue is Color color)
                     dropSenderView.MainFrame.BackgroundColor = color;
         }
         #endregion
-
-
         public double ScreenX { get; private set; }
         public double ScreenY { get; private set; }
         public PanGestureRecognizer PanGestureRecognizer { get; set; }
 
-        public Sample3DragAndDropSenderView()
+        public DragAndDropSample3SenderView()
         {
             InitializeComponent();
             PanGestureRecognizer = new PanGestureRecognizer()
@@ -52,7 +45,7 @@ namespace DeveloperSample.Core.Pages.Sample3
 
         void PanGestureRecognizer_PanUpdated(object sender, PanUpdatedEventArgs e)
         {
-            var parent = this.GetFirstParentOfType<Sample3DragAndDropContainer>();
+            var parent = this.GetFirstParentOfType<DragAndDropSample3Container>();
 
             // Update on Drop
             if (e.StatusType == GestureStatus.Completed)
