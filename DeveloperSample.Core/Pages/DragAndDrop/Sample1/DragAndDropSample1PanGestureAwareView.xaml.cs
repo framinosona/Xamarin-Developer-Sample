@@ -8,14 +8,11 @@ namespace DeveloperSample.Core.Pages.DragAndDrop.Sample1
     [DesignTimeVisible(true)]
     public partial class DragAndDropSample1PanGestureAwareView
     {
-
-        public PanGestureRecognizer PanGestureRecognizer { get; set; }
-
         public DragAndDropSample1PanGestureAwareView()
         {
             InitializeComponent();
 
-            PanGestureRecognizer = new PanGestureRecognizer()
+            PanGestureRecognizer = new PanGestureRecognizer
             {
                 TouchPoints = 1
             };
@@ -23,9 +20,11 @@ namespace DeveloperSample.Core.Pages.DragAndDrop.Sample1
             GestureRecognizers.Add(PanGestureRecognizer);
         }
 
-        void PanGestureRecognizer_PanUpdated(object sender, PanUpdatedEventArgs e)
+        public PanGestureRecognizer PanGestureRecognizer { get; set; }
+
+        private void PanGestureRecognizer_PanUpdated(object sender, PanUpdatedEventArgs e)
         {
-            StatusLabel.Text = e.StatusType.ToString();
+            StatusLabel.Text = e.StatusType.ToString(); // Canceled, Completed, Running, Started
             GestureIdLabel.Text = e.GestureId.ToString();
             TotalXLabel.Text = Math.Round(e.TotalX, 1).ToString(CultureInfo.InvariantCulture);
             TotalYLabel.Text = Math.Round(e.TotalY, 1).ToString(CultureInfo.InvariantCulture);

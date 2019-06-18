@@ -1,38 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <base:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:base="clr-namespace:DeveloperSample.Core.Pages.BasePageFiles"
-             xmlns:sample3="clr-namespace:DeveloperSample.Core.Pages.DragAndDrop.Sample3;assembly=DeveloperSample.Core"
-             x:Class="DeveloperSample.Core.Pages.DragAndDrop.Sample3.DragAndDropSample3Page">
+                      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                      xmlns:base="clr-namespace:DeveloperSample.Core.Pages.BasePageFiles"
+                      xmlns:components="clr-namespace:DeveloperSample.Core.Pages.DragAndDrop.Sample3.Components;assembly=DeveloperSample.Core"
+                      x:Class="DeveloperSample.Core.Pages.DragAndDrop.Sample3.DragAndDropSample3Page">
     <ContentPage.Content>
-        <sample3:DragAndDropSample3Container>
-            <AbsoluteLayout>
-                
-                <sample3:DragAndDropSample3ReceiverView
+        <AbsoluteLayout>
+
+            <components:DragAndDropSample3ReceivingView
                 AbsoluteLayout.LayoutFlags="All"
-                AbsoluteLayout.LayoutBounds=".1,.1,.2,.3"/>
-                <sample3:DragAndDropSample3ReceiverView
+                AbsoluteLayout.LayoutBounds=".1,.1,.2,.3"
+                BackgroundColor="Beige" />
+            <components:DragAndDropSample3ReceivingView
                 AbsoluteLayout.LayoutFlags="All"
-                AbsoluteLayout.LayoutBounds=".5,.1,.2,.3"/>
-                <sample3:DragAndDropSample3ReceiverView
+                AbsoluteLayout.LayoutBounds=".5,.1,.2,.3"
+                BackgroundColor="Beige" />
+            <components:DragAndDropSample3ReceivingView
                 AbsoluteLayout.LayoutFlags="All"
-                AbsoluteLayout.LayoutBounds=".9,.1,.2,.3"/>
-                
-                
-                <sample3:DragAndDropSample3SenderView
+                AbsoluteLayout.LayoutBounds=".9,.1,.2,.3"
+                BackgroundColor="Beige" />
+
+
+            <components:DragAndDropSample3MovingView
                 AbsoluteLayout.LayoutFlags="All"
                 AbsoluteLayout.LayoutBounds=".1,.9,.2,.3"
-                Color="BlueViolet"/>
-                <sample3:DragAndDropSample3SenderView
+                BackgroundColor="BlueViolet" />
+            <components:DragAndDropSample3MovingView
                 AbsoluteLayout.LayoutFlags="All"
                 AbsoluteLayout.LayoutBounds=".5,.9,.2,.3"
-                Color="SeaGreen"/>
-                <sample3:DragAndDropSample3SenderView
+                BackgroundColor="SeaGreen" />
+            <components:DragAndDropSample3MovingView
                 AbsoluteLayout.LayoutFlags="All"
                 AbsoluteLayout.LayoutBounds=".9,.9,.2,.3"
-                Color="Firebrick"/>
-                
-            </AbsoluteLayout>
-        </sample3:DragAndDropSample3Container>
+                BackgroundColor="Firebrick" />
+
+        </AbsoluteLayout>
     </ContentPage.Content>
 </base:BaseContentPage>

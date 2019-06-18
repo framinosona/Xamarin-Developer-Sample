@@ -1,20 +1,22 @@
-﻿using Xamarin.Forms;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Xamarin.Forms;
 
-namespace DeveloperSample.Core.Pages.BasePageFiles
+namespace DeveloperSample.Core.Helpers
 {
-    public static class ViewExtensions
+    public static class XamarinFormsExtensions
     {
         public static List<T> GetAllChildrenOfType<T>(this Element view)
         {
+            if (view is ContentPage page) view = page.Content;
+
             var output = new List<T>();
 
-            if (view is T goodTypedView)
-                output.Add(goodTypedView);
+            if (view is T tview)
+                output.Add(tview);
 
             if (view is Layout layout)
                 foreach (var child in layout.Children)
-                    if (child is VisualElement elementChild)
+                    if (child is Element elementChild)
                         output.AddRange(elementChild.GetAllChildrenOfType<T>());
 
             return output;
@@ -22,20 +24,20 @@ namespace DeveloperSample.Core.Pages.BasePageFiles
 
         public static T GetFirstParentOfType<T>(this Element view)
         {
-            Element output = view;
+            var output = view;
             while (output.Parent != null)
             {
                 if (output.Parent is T parent)
                     return parent;
-                else
-                    output = output.Parent;
+                output = output.Parent;
             }
+
             return default;
         }
 
 
         /// <summary>
-        /// Gets the screen coordinates from top left corner.
+        ///     Gets the screen coordinates from top left corner.
         /// </summary>
         /// <returns>The screen coordinates.</returns>
         /// <param name="view">View.</param>
@@ -46,14 +48,13 @@ namespace DeveloperSample.Core.Pages.BasePageFiles
             // The coordinates returned refer to the top left corner of the view.
 
             // Initialize with the view's "local" coordinates with respect to its parent
-            double screenCoordinateX = view.X;
-            double screenCoordinateY = view.Y;
+            var screenCoordinateX = view.X;
+            var screenCoordinateY = view.Y;
 
             // Get the view's parent (if it has one...)
             if (view.Parent.GetType() != typeof(App))
             {
-                VisualElement parent = (VisualElement) view.Parent;
-
+                var parent = (VisualElement) view.Parent;
 
                 // Loop through all parents
                 while (parent != null)

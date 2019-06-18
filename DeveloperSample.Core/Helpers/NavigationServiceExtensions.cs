@@ -9,29 +9,36 @@ namespace DeveloperSample.Core.Helpers
 {
     public static class NavigationServiceExtensions
     {
-        public static async Task TryNavigateAsync(this INavigationService navigationService, Uri uri, INavigationParameters parameters = null)
+        public static async Task TryNavigateAsync(this INavigationService navigationService, Uri uri,
+            INavigationParameters parameters = null)
         {
             var result = await navigationService.NavigateAsync(uri, parameters);
             HandleNavigationResult(result);
         }
-        public static async Task TryNavigateModallyAsync(this INavigationService navigationService, Uri uri, INavigationParameters parameters = null)
+
+        public static async Task TryNavigateModallyAsync(this INavigationService navigationService, Uri uri,
+            INavigationParameters parameters = null)
         {
             var result = await navigationService.NavigateAsync(uri, parameters, true);
             HandleNavigationResult(result);
         }
-        public static async Task TryNavigateAsync(this INavigationService navigationService, String path, INavigationParameters parameters = null)
+
+        public static async Task TryNavigateAsync(this INavigationService navigationService, string path,
+            INavigationParameters parameters = null)
         {
             var result = await navigationService.NavigateAsync(path, parameters);
             HandleNavigationResult(result);
         }
 
-        public static async Task TryNavigateModallyAsync(this INavigationService navigationService, String path, INavigationParameters parameters = null)
+        public static async Task TryNavigateModallyAsync(this INavigationService navigationService, string path,
+            INavigationParameters parameters = null)
         {
             var result = await navigationService.NavigateAsync(path, parameters, true);
             HandleNavigationResult(result);
         }
 
-        public static async Task TryNavigateBackAsync(this INavigationService navigationService, INavigationParameters parameters = null)
+        public static async Task TryNavigateBackAsync(this INavigationService navigationService,
+            INavigationParameters parameters = null)
         {
             var result = await navigationService.GoBackAsync(parameters);
             HandleNavigationResult(result);

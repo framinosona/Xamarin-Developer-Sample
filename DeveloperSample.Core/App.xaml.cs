@@ -11,6 +11,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+
 namespace DeveloperSample.Core
 {
     public partial class App : PrismApplication
@@ -56,6 +57,5 @@ namespace DeveloperSample.Core
             // Handle when your app resumes
             this.Trace();
         }
-
     }
 }

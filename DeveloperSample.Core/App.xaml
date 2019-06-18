@@ -9,7 +9,7 @@
                         mc:Ignorable="d"
                         x:Class="DeveloperSample.Core.App">
     <Application.Resources>
-        <ResourceDictionary> 
+        <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <styles:DefaultResourceDictionary />
                 <styles:FontsResourceDictionary />

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <base:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:base="clr-namespace:DeveloperSample.Core.Pages.BasePageFiles"
-             xmlns:sample2="clr-namespace:DeveloperSample.Core.Pages.DragAndDrop.Sample2;assembly=DeveloperSample.Core"
-             x:Class="DeveloperSample.Core.Pages.DragAndDrop.Sample2.DragAndDropSample2Page">
+                      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                      xmlns:base="clr-namespace:DeveloperSample.Core.Pages.BasePageFiles"
+                      xmlns:sample2="clr-namespace:DeveloperSample.Core.Pages.DragAndDrop.Sample2;assembly=DeveloperSample.Core"
+                      x:Class="DeveloperSample.Core.Pages.DragAndDrop.Sample2.DragAndDropSample2Page">
     <ContentPage.Content>
         <AbsoluteLayout>
             <sample2:DragAndDropSample2DragAndDroppableView AbsoluteLayout.LayoutFlags="PositionProportional"
-                                               AbsoluteLayout.LayoutBounds=".5,.5" />
+                                                            AbsoluteLayout.LayoutBounds=".5,.5" />
         </AbsoluteLayout>
     </ContentPage.Content>
 </base:BaseContentPage>

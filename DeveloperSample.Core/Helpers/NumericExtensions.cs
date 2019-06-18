@@ -8,7 +8,7 @@ namespace DeveloperSample.Core.Helpers
         {
             if (input < 0) return 0;
             if (input > 255) return 255;
-            return (byte)Math.Floor(input);
+            return (byte) Math.Floor(input);
         }
     }
 }

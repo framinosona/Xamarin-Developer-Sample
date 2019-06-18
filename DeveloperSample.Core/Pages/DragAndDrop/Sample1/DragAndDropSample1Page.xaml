@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <base:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:base="clr-namespace:DeveloperSample.Core.Pages.BasePageFiles"
-             xmlns:sample1="clr-namespace:DeveloperSample.Core.Pages.DragAndDrop.Sample1;assembly=DeveloperSample.Core"
-             x:Class="DeveloperSample.Core.Pages.DragAndDrop.Sample1.DragAndDropSample1Page">
+                      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                      xmlns:base="clr-namespace:DeveloperSample.Core.Pages.BasePageFiles"
+                      xmlns:sample1="clr-namespace:DeveloperSample.Core.Pages.DragAndDrop.Sample1;assembly=DeveloperSample.Core"
+                      x:Class="DeveloperSample.Core.Pages.DragAndDrop.Sample1.DragAndDropSample1Page">
     <ContentPage.Content>
-        
-        <AbsoluteLayout> 
+
+        <AbsoluteLayout>
             <sample1:DragAndDropSample1PanGestureAwareView AbsoluteLayout.LayoutFlags="All"
-                                                  AbsoluteLayout.LayoutBounds=".1,.1,.6,.6" />
+                                                           AbsoluteLayout.LayoutBounds=".1,.1,.6,.6" />
             <sample1:DragAndDropSample1PanGestureAwareView AbsoluteLayout.LayoutFlags="All"
-                                                  AbsoluteLayout.LayoutBounds=".9,.9,.6,.6" />
+                                                           AbsoluteLayout.LayoutBounds=".9,.9,.6,.6" />
         </AbsoluteLayout>
     </ContentPage.Content>
 </base:BaseContentPage>

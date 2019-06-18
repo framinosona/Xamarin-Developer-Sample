@@ -7,19 +7,20 @@ namespace DeveloperSample.Core.Pages.BasePageFiles
     public class BaseViewModel : BindableBase, INavigationAware, IDestructible
     {
         private string _title;
-        public string Title
-        {
-            get => _title;
-            set => SetProperty(ref _title, value);
-        }
-        
-        protected INavigationService NavigationService { get; }
 
         public BaseViewModel(INavigationService navigationService)
         {
             NavigationService = navigationService;
         }
-        
+
+        public string Title
+        {
+            get => _title;
+            set => SetProperty(ref _title, value);
+        }
+
+        protected INavigationService NavigationService { get; }
+
         public virtual void Destroy()
         {
             this.Trace();
