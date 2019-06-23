@@ -3,9 +3,9 @@ using Xamarin.Forms.Xaml;
 namespace DeveloperSample.Core.Styles
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DefaultResourceDictionary
+    public partial class ConvertersResourceDictionary
     {
-        public DefaultResourceDictionary()
+        public ConvertersResourceDictionary()
         {
             InitializeComponent();
         }

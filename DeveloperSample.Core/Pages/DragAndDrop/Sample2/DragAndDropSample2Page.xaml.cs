@@ -1,8 +1,6 @@
-using DeveloperSample.Core.Pages.BasePageFiles;
-
 namespace DeveloperSample.Core.Pages.DragAndDrop.Sample2
 {
-    public partial class DragAndDropSample2Page : BaseContentPage
+    public partial class DragAndDropSample2Page
     {
         public DragAndDropSample2Page()
         {

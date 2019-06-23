@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DeveloperSample.Core.Pages.Colors.Components.ColorPickerRGB">
+    <Frame>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="10*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Red"
+                   TextColor="Red"
+                   Grid.Row="1"
+                   Grid.Column="0" />
+            <Slider ThumbColor="Red"
+                    MinimumTrackColor="Red"
+                    ValueChanged="RedValueChanged"
+                    Value="{Binding DisplayedColor.R, Mode=OneWay}"
+                    x:Name="Red"
+                    Grid.Row="1"
+                    Grid.Column="1" />
+            <Label Text="{Binding DisplayedColor.R, StringFormat='{0:P}'}"
+                   TextColor="Red"
+                   Grid.Row="1"
+                   Grid.Column="2" />
+
+            <Label Text="Green"
+                   TextColor="Green"
+                   Grid.Row="2"
+                   Grid.Column="0" />
+            <Slider ThumbColor="Green"
+                    MinimumTrackColor="Green"
+                    ValueChanged="GreenValueChanged"
+                    Value="{Binding DisplayedColor.G, Mode=OneWay}"
+                    x:Name="Green"
+                    Grid.Row="2"
+                    Grid.Column="1" />
+            <Label Text="{Binding DisplayedColor.G, StringFormat='{0:P}'}"
+                   TextColor="Green"
+                   Grid.Row="2"
+                   Grid.Column="2" />
+
+            <Label Text="Blue"
+                   TextColor="Blue"
+                   Grid.Row="3"
+                   Grid.Column="0" />
+            <Slider ThumbColor="Blue"
+                    MinimumTrackColor="Blue"
+                    ValueChanged="BlueValueChanged"
+                    Value="{Binding DisplayedColor.B, Mode=OneWay}"
+                    x:Name="Blue"
+                    Grid.Row="3"
+                    Grid.Column="1" />
+            <Label Text="{Binding DisplayedColor.B, StringFormat='{0:P}'}"
+                   TextColor="Green"
+                   Grid.Row="3"
+                   Grid.Column="2" />
+        </Grid>
+    </Frame>
+</ContentView>

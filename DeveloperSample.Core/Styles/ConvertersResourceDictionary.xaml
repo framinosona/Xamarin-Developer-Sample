@@ -1,0 +1,16 @@
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:converters="clr-namespace:DeveloperSample.Core.Converters;assembly=DeveloperSample.Core"
+                    x:Class="DeveloperSample.Core.Styles.ConvertersResourceDictionary">
+    
+    <converters:ColorToInverseColorConverter x:Key="ColorToInverseColorConverter"/>
+    <converters:ColorToBlackOrWhiteConverter x:Key="ColorToBlackOrWhiteConverter"/>
+    <converters:ColorToGrayScaleColorConverter x:Key="ColorToGrayScaleColorConverter"/>
+    <converters:ColorToColorForTextConverter x:Key="ColorToColorForTextConverter"/>
+    
+    <converters:ColorToRgbaStringConverter x:Key="ColorToRgbaStringConverter"/>
+    <converters:ColorToRgbStringConverter x:Key="ColorToRgbStringConverter"/>
+    <converters:ColorToHexRgbaStringConverter x:Key="ColorToHexRgbaStringConverter"/>
+    <converters:ColorToHexRgbStringConverter x:Key="ColorToHexRgbStringConverter"/>
+    
+</ResourceDictionary>

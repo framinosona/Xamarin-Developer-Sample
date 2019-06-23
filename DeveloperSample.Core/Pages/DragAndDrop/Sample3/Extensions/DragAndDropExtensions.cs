@@ -44,9 +44,9 @@ namespace DeveloperSample.Core.Pages.DragAndDrop.Sample3.Extensions
                 dropContainer?.DragAndDroppableViewDropped(dragAndDropMovingView);
 
             // Coordinate of center = Initial position of top left corner + Pan transformation + Size / 2 
-            var (X, Y) = visualElement.GetScreenCoordinates();
-            dragAndDropMovingView.ScreenX = X + e.TotalX + visualElement.Width / 2;
-            dragAndDropMovingView.ScreenY = Y + e.TotalY + visualElement.Height / 2;
+            var (x, y) = visualElement.GetScreenCoordinates();
+            dragAndDropMovingView.ScreenX = x + e.TotalX + visualElement.Width / 2;
+            dragAndDropMovingView.ScreenY = y + e.TotalY + visualElement.Height / 2;
 
             // Move view
             if (e.StatusType == GestureStatus.Running)

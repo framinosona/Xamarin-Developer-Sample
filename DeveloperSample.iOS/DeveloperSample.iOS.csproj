@@ -27,6 +27,8 @@
     <DefineConstants>$(DefineConstants);ENABLE_TEST_CLOUD</DefineConstants>
     <ConsolePause>false</ConsolePause>
     <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
   </PropertyGroup>
@@ -34,6 +36,8 @@
     <DefineConstants>$(DefineConstants);ENABLE_TEST_CLOUD</DefineConstants>
     <ConsolePause>false</ConsolePause>
     <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
   </PropertyGroup>
   <!-- Platform -->
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">

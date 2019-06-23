@@ -12,7 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DeveloperSample.Extras", "D
 		.editorconfig = .editorconfig
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
+		DeveloperSample.sln.DotSettings = DeveloperSample.sln.DotSettings
 		DeveloperSample.targets = DeveloperSample.targets
+		.github\FUNDING.yml = .github\FUNDING.yml
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global

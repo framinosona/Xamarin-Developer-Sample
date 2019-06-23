@@ -1,8 +1,75 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <base:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                      xmlns:components="clr-namespace:DeveloperSample.Core.Pages.Colors.Components"
                       xmlns:base="clr-namespace:DeveloperSample.Core.Pages.BasePageFiles"
-                      x:Class="DeveloperSample.Core.Pages.Colors.Sample1.ColorSample1Page">
-
+                      x:Class="DeveloperSample.Core.Pages.Colors.Sample1.ColorSample1Page"
+                      BackgroundColor="{Binding DisplayedColor}">
+    <base:BaseContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontAttributes"
+                        Value="Bold" />
+                <Setter Property="FontSize"
+                        Value="12" />
+                <Setter Property="HorizontalTextAlignment"
+                        Value="Center" />
+            </Style>
+        </ResourceDictionary>
+    </base:BaseContentPage.Resources>
+    <Grid ColumnSpacing="10"
+          RowSpacing="10"
+          Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Frame Grid.Row="0"
+               Grid.ColumnSpan="3"
+               x:Name="MainFrame"
+               BackgroundColor="{Binding DisplayedColor}">
+            <StackLayout VerticalOptions="Center"
+                         HorizontalOptions="Center">
+                <Label Text="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToHexRgbStringConverter}}"
+                       TextColor="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToColorForTextConverter}}" />
+                <Label Text="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToRgbStringConverter}}"
+                       TextColor="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToColorForTextConverter}}" />
+            </StackLayout>
+        </Frame>
+        <Frame Grid.Row="1"
+               Grid.Column="0"
+               x:Name="InverseFrame"
+               BackgroundColor="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToInverseColorConverter}}">
+            <Label Text="Inverse"
+                   TextColor="{Binding Source={x:Reference InverseFrame}, Path=BackgroundColor, Converter={StaticResource ColorToColorForTextConverter}}" />
+        </Frame>
+        <Frame Grid.Row="1"
+               Grid.Column="1"
+               x:Name="BlackOrWhiteFrame"
+               BackgroundColor="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToBlackOrWhiteConverter}}">
+            <Label Text="Black or White"
+                   TextColor="{Binding Source={x:Reference BlackOrWhiteFrame}, Path=BackgroundColor, Converter={StaticResource ColorToColorForTextConverter}}" />
+        </Frame>
+        <Frame Grid.Row="1"
+               Grid.Column="2"
+               x:Name="GrayscaleFrame"
+               BackgroundColor="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToGrayScaleColorConverter}}">
+            <Label Text="Grayscale"
+                   TextColor="{Binding Source={x:Reference GrayscaleFrame}, Path=BackgroundColor, Converter={StaticResource ColorToColorForTextConverter}}" />
+        </Frame>
+        <ScrollView Grid.Row="2"
+                    Grid.ColumnSpan="3"
+                    Grid.Column="0">
+            <StackLayout Spacing="10">
+                <components:ColorPickerRGB BindingContext="{Binding .}" />
+                <components:ColorPickerHSL BindingContext="{Binding .}" />
+            </StackLayout>
+        </ScrollView>
+    </Grid>
 </base:BaseContentPage>

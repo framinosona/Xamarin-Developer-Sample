@@ -6,7 +6,6 @@ using DeveloperSample.Core.Pages.DragAndDrop.Sample3;
 using DeveloperSample.Core.Pages.MainPage;
 using Prism;
 using Prism.Ioc;
-using Prism.Unity;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,7 +13,7 @@ using Xamarin.Forms.Xaml;
 
 namespace DeveloperSample.Core
 {
-    public partial class App : PrismApplication
+    public partial class App
     {
         public App(IPlatformInitializer platformInitializer = null) : base(platformInitializer)
         {

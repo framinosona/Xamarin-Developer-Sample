@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DeveloperSample.Core.Pages.Colors.Components.ColorPickerHSL">
+    <Frame>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="10*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Hue"
+                   Grid.Row="1"
+                   Grid.Column="0" />
+            <Slider ValueChanged="HueValueChanged"
+                    Value="{Binding DisplayedColor.Hue, Mode=OneWay}"
+                    x:Name="Hue"
+                    Grid.Row="1"
+                    Grid.Column="1" />
+            <Label Text="{Binding DisplayedColor.Hue, StringFormat='{0:P}'}"
+                   Grid.Row="1"
+                   Grid.Column="2" />
+
+            <Label Text="Sat"
+                   Grid.Row="2"
+                   Grid.Column="0" />
+            <Slider ValueChanged="SatValueChanged"
+                    Value="{Binding DisplayedColor.Saturation, Mode=OneWay}"
+                    x:Name="Sat"
+                    Grid.Row="2"
+                    Grid.Column="1" />
+            <Label Text="{Binding DisplayedColor.Saturation, StringFormat='{0:P}'}"
+                   Grid.Row="2"
+                   Grid.Column="2" />
+
+            <Label Text="Lum"
+                   Grid.Row="3"
+                   Grid.Column="0" />
+            <Slider ValueChanged="LumValueChanged"
+                    Value="{Binding DisplayedColor.Luminosity, Mode=OneWay}"
+                    x:Name="Lum"
+                    Grid.Row="3"
+                    Grid.Column="1" />
+            <Label Text="{Binding DisplayedColor.Luminosity, StringFormat='{0:P}'}"
+                   Grid.Row="3"
+                   Grid.Column="2" />
+        </Grid>
+    </Frame>
+</ContentView>
