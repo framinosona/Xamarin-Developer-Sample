@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
+
 <base:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                       xmlns:components="clr-namespace:DeveloperSample.Core.Pages.Colors.Components"
@@ -21,27 +22,34 @@
           RowSpacing="10"
           Padding="10">
         <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
             <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="3*" />
+            <RowDefinition Height="6*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
+
         <Frame Grid.Row="0"
                Grid.ColumnSpan="3"
                x:Name="MainFrame"
                BackgroundColor="{Binding DisplayedColor}">
             <StackLayout VerticalOptions="Center"
                          HorizontalOptions="Center">
-                <Label Text="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToHexRgbStringConverter}}"
-                       TextColor="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToColorForTextConverter}}" />
-                <Label Text="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToRgbStringConverter}}"
-                       TextColor="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToColorForTextConverter}}" />
+                <Label
+                    Text="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToHexRgbStringConverter}}"
+                    TextColor="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToColorForTextConverter}}" />
+                <Label
+                    Text="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToRgbStringConverter}}"
+                    TextColor="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToColorForTextConverter}}" />
+                <Label
+                    Text="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToCmykStringConverter}}"
+                    TextColor="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToColorForTextConverter}}" />
             </StackLayout>
         </Frame>
+
         <Frame Grid.Row="1"
                Grid.Column="0"
                x:Name="InverseFrame"
@@ -63,12 +71,14 @@
             <Label Text="Grayscale"
                    TextColor="{Binding Source={x:Reference GrayscaleFrame}, Path=BackgroundColor, Converter={StaticResource ColorToColorForTextConverter}}" />
         </Frame>
+
         <ScrollView Grid.Row="2"
                     Grid.ColumnSpan="3"
                     Grid.Column="0">
             <StackLayout Spacing="10">
                 <components:ColorPickerRGB BindingContext="{Binding .}" />
                 <components:ColorPickerHSL BindingContext="{Binding .}" />
+                <components:ColorPickerCMYK BindingContext="{Binding .}" />
             </StackLayout>
         </ScrollView>
     </Grid>

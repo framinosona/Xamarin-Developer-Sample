@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace DeveloperSample.Core.Helpers
 {
-    public static class XamarinFormsExtensions
+    public static class ViewExtensions
     {
         public static List<T> GetAllChildrenOfType<T>(this Element view)
         {
@@ -34,7 +34,6 @@ namespace DeveloperSample.Core.Helpers
 
             return default;
         }
-
 
         /// <summary>
         ///     Gets the screen coordinates from top left corner.

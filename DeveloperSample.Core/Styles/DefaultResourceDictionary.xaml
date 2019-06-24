@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
+
 <ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                     x:Class="DeveloperSample.Core.Styles.DefaultResourceDictionary">
     <Style TargetType="Label"
            x:Key="TitleLabelStyle">
         <Setter Property="TextColor"
-                Value="#2b2d41" />
+                Value="{DynamicResource MainColor}" />
         <Setter Property="FontAttributes"
                 Value="Bold" />
         <Setter Property="FontSize"
@@ -27,7 +28,7 @@
     </Style>
     <Style TargetType="Button">
         <Setter Property="BackgroundColor"
-                Value="#2b2d41" />
+                Value="{DynamicResource MainColor}" />
         <Setter Property="FontAttributes"
                 Value="Bold" />
         <Setter Property="TextColor"
@@ -40,7 +41,7 @@
         <Setter Property="HeightRequest"
                 Value="1" />
         <Setter Property="BackgroundColor"
-                Value="#2b2d41" />
+                Value="{DynamicResource MainColor}" />
         <Setter Property="Margin"
                 Value="10" />
         <Setter Property="Padding"

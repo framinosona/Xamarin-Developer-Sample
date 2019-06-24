@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DeveloperSample.Core.Pages.Colors.Components.ColorPickerCMYK">
+    <Frame>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="10*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Cya"
+                   TextColor="Cyan"
+                   Grid.Row="0"
+                   Grid.Column="0" />
+            <Slider Value="{Binding DisplayedColor, Converter={StaticResource ColorToCyanConverter}, Mode=OneWay}"
+                    x:Name="Cyan"
+                    ValueChanged="CyanValueChanged"
+                    ThumbColor="Cyan"
+                    Grid.Row="0"
+                    Grid.Column="1" />
+            <Label
+                Text="{Binding DisplayedColor, Converter={StaticResource ColorToCyanConverter}, Mode=OneWay, StringFormat='{0:P}'}"
+                TextColor="Cyan"
+                Grid.Row="0"
+                Grid.Column="2" />
+
+            <Label Text="Mag"
+                   Grid.Row="1"
+                   TextColor="Magenta"
+                   Grid.Column="0" />
+            <Slider Value="{Binding DisplayedColor, Converter={StaticResource ColorToMagentaConverter}, Mode=OneWay}"
+                    x:Name="Magenta"
+                    ThumbColor="Magenta"
+                    ValueChanged="MagentaValueChanged"
+                    Grid.Row="1"
+                    Grid.Column="1" />
+            <Label
+                Text="{Binding DisplayedColor, Converter={StaticResource ColorToMagentaConverter}, Mode=OneWay, StringFormat='{0:P}'}"
+                TextColor="Magenta"
+                Grid.Row="1"
+                Grid.Column="2" />
+
+            <Label Text="Yel"
+                   TextColor="Yellow"
+                   Grid.Row="2"
+                   Grid.Column="0" />
+            <Slider Value="{Binding DisplayedColor, Converter={StaticResource ColorToYellowConverter}, Mode=OneWay}"
+                    ThumbColor="Yellow"
+                    x:Name="Yellow"
+                    ValueChanged="YellowValueChanged"
+                    Grid.Row="2"
+                    Grid.Column="1" />
+            <Label
+                Text="{Binding DisplayedColor, Converter={StaticResource ColorToYellowConverter}, Mode=OneWay, StringFormat='{0:P}'}"
+                TextColor="Yellow"
+                Grid.Row="2"
+                Grid.Column="2" />
+
+            <Label Text="Bla"
+                   Grid.Row="3"
+                   Grid.Column="0" />
+            <Slider Value="{Binding DisplayedColor, Converter={StaticResource ColorToBlackKeyConverter}, Mode=OneWay}"
+                    IsEnabled="False"
+                    ThumbColor="Black"
+                    Grid.Row="3"
+                    Grid.Column="1" />
+            <Label
+                Text="{Binding DisplayedColor, Converter={StaticResource ColorToBlackKeyConverter}, Mode=OneWay, StringFormat='{0:P}'}"
+                Grid.Row="3"
+                Grid.Column="2" />
+        </Grid>
+    </Frame>
+</ContentView>

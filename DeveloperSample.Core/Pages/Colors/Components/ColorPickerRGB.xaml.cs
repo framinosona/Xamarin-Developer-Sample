@@ -6,27 +6,27 @@ namespace DeveloperSample.Core.Pages.Colors.Components
 {
     public partial class ColorPickerRGB : ContentView
     {
+        public ColorPickerRGB()
+        {
+            InitializeComponent();
+        }
+
         private void RedValueChanged(object sender, ValueChangedEventArgs e)
         {
             if (BindingContext is ColorSample1PageViewModel viewModel)
-                viewModel.DisplayedColor = viewModel.DisplayedColor.WithR(Red.Value);
+                viewModel.DisplayedColor = viewModel.DisplayedColor.WithRed(Red.Value);
         }
 
         private void GreenValueChanged(object sender, ValueChangedEventArgs e)
         {
             if (BindingContext is ColorSample1PageViewModel viewModel)
-                viewModel.DisplayedColor = viewModel.DisplayedColor.WithG(Green.Value);
+                viewModel.DisplayedColor = viewModel.DisplayedColor.WithGreen(Green.Value);
         }
 
         private void BlueValueChanged(object sender, ValueChangedEventArgs e)
         {
             if (BindingContext is ColorSample1PageViewModel viewModel)
-                viewModel.DisplayedColor = viewModel.DisplayedColor.WithB(Blue.Value);
-        }
-
-        public ColorPickerRGB()
-        {
-            InitializeComponent();
+                viewModel.DisplayedColor = viewModel.DisplayedColor.WithBlue(Blue.Value);
         }
     }
 }

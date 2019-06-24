@@ -1,12 +1,15 @@
 using DeveloperSample.Core.Pages.Colors.Sample1;
-using System;
-using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace DeveloperSample.Core.Pages.Colors.Components
 {
-    public partial class ColorPickerHSL : ContentView
+    public partial class ColorPickerHSL
     {
+        public ColorPickerHSL()
+        {
+            InitializeComponent();
+        }
+
         private void HueValueChanged(object sender, ValueChangedEventArgs e)
         {
             if (BindingContext is ColorSample1PageViewModel viewModel)
@@ -34,11 +37,6 @@ namespace DeveloperSample.Core.Pages.Colors.Components
             Hue.ThumbColor = viewModel.DisplayedColor.WithSaturation(1.0).WithLuminosity(0.5);
             Sat.ThumbColor = viewModel.DisplayedColor.WithLuminosity(0.5);
             Lum.ThumbColor = viewModel.DisplayedColor.WithSaturation(1.0);
-        }
-
-        public ColorPickerHSL()
-        {
-            InitializeComponent();
         }
     }
 }
