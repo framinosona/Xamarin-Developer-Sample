@@ -44,9 +44,6 @@
                 <Label
                     Text="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToRgbStringConverter}}"
                     TextColor="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToColorForTextConverter}}" />
-                <Label
-                    Text="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToCmykStringConverter}}"
-                    TextColor="{Binding Source={x:Reference MainFrame}, Path=BackgroundColor, Converter={StaticResource ColorToColorForTextConverter}}" />
             </StackLayout>
         </Frame>
 
