@@ -20,13 +20,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DeveloperSample.Extras", "D
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Design|Any CPU = Design|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-		Design|iPhoneSimulator = Design|iPhoneSimulator
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
 		Release|iPhoneSimulator = Release|iPhoneSimulator
-		Design|iPhone = Design|iPhone
 		Debug|iPhone = Debug|iPhone
 		Release|iPhone = Release|iPhone
 	EndGlobalSection
@@ -55,12 +52,6 @@ Global
 		{86EAE4C8-C4B7-47E2-874F-3FFC4A3F8CB2}.Debug|iPhone.Build.0 = Debug|iPhone
 		{86EAE4C8-C4B7-47E2-874F-3FFC4A3F8CB2}.Release|iPhone.ActiveCfg = Release|iPhone
 		{86EAE4C8-C4B7-47E2-874F-3FFC4A3F8CB2}.Release|iPhone.Build.0 = Release|iPhone
-		{86EAE4C8-C4B7-47E2-874F-3FFC4A3F8CB2}.Design|Any CPU.ActiveCfg = Design|iPhoneSimulator
-		{86EAE4C8-C4B7-47E2-874F-3FFC4A3F8CB2}.Design|Any CPU.Build.0 = Design|iPhoneSimulator
-		{86EAE4C8-C4B7-47E2-874F-3FFC4A3F8CB2}.Design|iPhone.ActiveCfg = Design|iPhone
-		{86EAE4C8-C4B7-47E2-874F-3FFC4A3F8CB2}.Design|iPhone.Build.0 = Design|iPhone
-		{86EAE4C8-C4B7-47E2-874F-3FFC4A3F8CB2}.Design|iPhoneSimulator.ActiveCfg = Design|iPhoneSimulator
-		{86EAE4C8-C4B7-47E2-874F-3FFC4A3F8CB2}.Design|iPhoneSimulator.Build.0 = Design|iPhoneSimulator
 		{C07297C8-BFC2-4503-B692-81F5BDCA0F92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C07297C8-BFC2-4503-B692-81F5BDCA0F92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C07297C8-BFC2-4503-B692-81F5BDCA0F92}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -73,11 +64,5 @@ Global
 		{C07297C8-BFC2-4503-B692-81F5BDCA0F92}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{C07297C8-BFC2-4503-B692-81F5BDCA0F92}.Release|iPhone.ActiveCfg = Release|Any CPU
 		{C07297C8-BFC2-4503-B692-81F5BDCA0F92}.Release|iPhone.Build.0 = Release|Any CPU
-		{C07297C8-BFC2-4503-B692-81F5BDCA0F92}.Design|Any CPU.ActiveCfg = Design|Any CPU
-		{C07297C8-BFC2-4503-B692-81F5BDCA0F92}.Design|Any CPU.Build.0 = Design|Any CPU
-		{C07297C8-BFC2-4503-B692-81F5BDCA0F92}.Design|iPhone.ActiveCfg = Design|Any CPU
-		{C07297C8-BFC2-4503-B692-81F5BDCA0F92}.Design|iPhone.Build.0 = Design|Any CPU
-		{C07297C8-BFC2-4503-B692-81F5BDCA0F92}.Design|iPhoneSimulator.ActiveCfg = Design|Any CPU
-		{C07297C8-BFC2-4503-B692-81F5BDCA0F92}.Design|iPhoneSimulator.Build.0 = Design|Any CPU
 	EndGlobalSection
 EndGlobal
