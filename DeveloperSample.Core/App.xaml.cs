@@ -1,11 +1,13 @@
 using DeveloperSample.Core.Helpers;
-using DeveloperSample.Core.Pages.CarouselView.Sample1;
 using DeveloperSample.Core.Pages.Colors.Sample1;
 using DeveloperSample.Core.Pages.DragAndDrop.Sample1;
 using DeveloperSample.Core.Pages.DragAndDrop.Sample2;
 using DeveloperSample.Core.Pages.DragAndDrop.Sample3;
 using DeveloperSample.Core.Pages.Logging;
 using DeveloperSample.Core.Pages.MainPage;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using Prism;
 using Prism.Ioc;
 using Xamarin.Forms;
@@ -23,6 +25,9 @@ namespace DeveloperSample.Core
 
         protected override void OnStart()
         {
+            AppCenter.Start("ios=7123acdf-b4c7-494a-8652-7839fed1ddbb;" +
+                            "android=ee1dbbe2-a7f6-4905-9b29-46f2b088359d;",
+                typeof(Analytics), typeof(Crashes));
             // Handle when your app starts
             this.Trace();
         }

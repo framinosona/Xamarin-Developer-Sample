@@ -1,7 +1,6 @@
 using System.Windows.Input;
 using DeveloperSample.Core.Helpers;
 using DeveloperSample.Core.Pages.BasePageFiles;
-using DeveloperSample.Core.Pages.CarouselView.Sample1;
 using DeveloperSample.Core.Pages.Colors.Sample1;
 using DeveloperSample.Core.Pages.DragAndDrop.Sample1;
 using DeveloperSample.Core.Pages.DragAndDrop.Sample2;

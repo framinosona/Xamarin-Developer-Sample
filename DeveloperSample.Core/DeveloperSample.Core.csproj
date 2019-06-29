@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <Import Project="..\DeveloperSample.targets" />
 
@@ -8,6 +8,8 @@
     </PropertyGroup>
 
     <ItemGroup Label="Package References">
+        <PackageReference Include="Microsoft.AppCenter.Analytics" Version="2.1.1" />
+        <PackageReference Include="Microsoft.AppCenter.Crashes" Version="2.1.1" />
         <PackageReference Include="NLog" Version="4.6.5" />
         <PackageReference Include="Prism.Core" Version="7.1.0.431" />
         <PackageReference Include="Prism.Forms" Version="7.1.0.431" />
