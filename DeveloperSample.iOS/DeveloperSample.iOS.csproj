@@ -29,13 +29,6 @@
         <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
         <MtouchFastDev>true</MtouchFastDev>
     </PropertyGroup>
-    <PropertyGroup Label="Build Configuration AppCenter" Condition=" '$(Configuration)' == 'AppCenter' ">
-        <DefineConstants>$(DefineConstants);ENABLE_TEST_CLOUD</DefineConstants>
-        <ConsolePause>false</ConsolePause>
-        <MtouchDebug>true</MtouchDebug>
-        <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
-        <MtouchFastDev>true</MtouchFastDev>
-    </PropertyGroup>
     <PropertyGroup Label="Build Configuration Release" Condition=" '$(Configuration)' == 'Release' ">
     </PropertyGroup>
     <PropertyGroup Label="Build Platform AnyCPU" Condition=" '$(Platform)' == 'AnyCPU' ">
@@ -60,12 +53,6 @@
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppCenter|Any CPU' ">
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppCenter|iPhone' ">
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppCenter|iPhoneSimulator' ">
     </PropertyGroup>
     <ItemGroup Label="Special files">
         <Compile Include="IosInitializer.cs"/>

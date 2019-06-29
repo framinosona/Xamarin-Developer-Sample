@@ -21,5 +21,19 @@
     <Compile Include="Tests.cs" />
     <Compile Include="AppInitializer.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DeveloperSample.Android\DeveloperSample.Android.csproj">
+      <Project>{74aac01f-8338-413b-bfd7-4d5843dc35de}</Project>
+      <Name>DeveloperSample.Android</Name>
+        <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+        <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\DeveloperSample.iOS\DeveloperSample.iOS.csproj">
+      <Project>{86eae4c8-c4b7-47e2-874f-3ffc4a3f8cb2}</Project>
+      <Name>DeveloperSample.iOS</Name>
+        <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+        <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

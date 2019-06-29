@@ -3,7 +3,7 @@
     <PropertyGroup Label="Build">
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
-        <Configurations>Debug;Release;AppCenter</Configurations>
+        <Configurations>Debug;Release</Configurations>
         <Platforms>AnyCPU;iPhone;iPhoneSimulator</Platforms>
         <OutputPath>bin/$(Platform)/$(Configuration)</OutputPath>
         <LangVersion>latest</LangVersion>
@@ -11,14 +11,6 @@
     <PropertyGroup Label="Build Configuration Debug"
                    Condition=" '$(Configuration)' == 'Debug' ">
         <DefineConstants>DEBUG;TRACE</DefineConstants>
-        <DebugType>full</DebugType>
-        <Optimize>false</Optimize>
-        <DebugSymbols>true</DebugSymbols>
-    </PropertyGroup>
-    <PropertyGroup Label="Build Configuration AppCenter"
-                   Condition=" '$(Configuration)' == 'AppCenter' ">
-        <ConfigurationGroup>Debug</ConfigurationGroup>
-        <DefineConstants>DEBUG;TRACE;APPCENTER</DefineConstants>
         <DebugType>full</DebugType>
         <Optimize>false</Optimize>
         <DebugSymbols>true</DebugSymbols>
