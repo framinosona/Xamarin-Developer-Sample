@@ -4,9 +4,9 @@ using Xamarin.Forms;
 
 namespace DeveloperSample.Core.Pages.Colors.Components
 {
-    public partial class ColorPickerRGB : ContentView
+    public partial class ColorPickerRgb
     {
-        public ColorPickerRGB()
+        public ColorPickerRgb()
         {
             InitializeComponent();
         }

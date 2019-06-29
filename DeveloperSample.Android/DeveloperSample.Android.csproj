@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-    <Import Label="Shared Csproj" Project="..\DeveloperSample.targets"/>
+    <Import Label="Shared Csproj" Project="..\DeveloperSample.targets" />
 
     <PropertyGroup Label="Build">
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -44,61 +44,61 @@
     </PropertyGroup>
 
     <ItemGroup Label="System References">
-        <Reference Include="Mono.Android"/>
-        <Reference Include="System"/>
-        <Reference Include="System.Core"/>
-        <Reference Include="System.Xml.Linq"/>
-        <Reference Include="System.Xml"/>
-        <Reference Include="System.Numerics"/>
-        <Reference Include="System.Numerics.Vectors"/>
+        <Reference Include="Mono.Android" />
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Xml.Linq" />
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Numerics" />
+        <Reference Include="System.Numerics.Vectors" />
     </ItemGroup>
 
     <ItemGroup Label="Package References">
-        <PackageReference Include="NLog" Version="4.6.5"/>
-        <PackageReference Include="Prism.Core" Version="7.1.0.431"/>
-        <PackageReference Include="Prism.Forms" Version="7.1.0.431"/>
-        <PackageReference Include="Prism.Unity.Forms" Version="7.1.0.431"/>
-        <PackageReference Include="Xamarin.Forms" Version="4.0.0.497661"/>
-        <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1"/>
-        <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.1"/>
-        <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.1"/>
-        <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="28.0.0.1"/>
-        <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.1"/>
-        <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.1"/>
-        <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.1"/>
-        <PackageReference Include="Xamarin.Essentials" Version="1.1.0"/>
-        <PackageReference Include="Xamarin.Forms.ConvertersPack" Version="1.0.0"/>
-        <PackageReference Include="Xamarin.Forms.DebugRainbows" Version="365.0.0"/>
-        <PackageReference Include="Xamarin.Forms.InputKit" Version="3.0.11"/>
-        <PackageReference Include="Xamarin.Forms.PancakeView" Version="1.0.21"/>
-        <PackageReference Include="Xamarin.Forms.Plugin.HorizontalList" Version="1.0.2"/>
-        <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.0.0.497661"/>
+        <PackageReference Include="NLog" Version="4.6.5" />
+        <PackageReference Include="Prism.Core" Version="7.1.0.431" />
+        <PackageReference Include="Prism.Forms" Version="7.1.0.431" />
+        <PackageReference Include="Prism.Unity.Forms" Version="7.1.0.431" />
+        <PackageReference Include="Xamarin.Forms" Version="4.0.0.497661" />
+        <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
+        <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.1" />
+        <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.1" />
+        <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="28.0.0.1" />
+        <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="28.0.0.1" />
+        <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.1" />
+        <PackageReference Include="Xamarin.Android.Support.CustomTabs" Version="28.0.0.1" />
+        <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
+        <PackageReference Include="Xamarin.Forms.ConvertersPack" Version="1.0.0" />
+        <PackageReference Include="Xamarin.Forms.DebugRainbows" Version="365.0.0" />
+        <PackageReference Include="Xamarin.Forms.InputKit" Version="3.0.11" />
+        <PackageReference Include="Xamarin.Forms.PancakeView" Version="1.0.21" />
+        <PackageReference Include="Xamarin.Forms.Plugin.HorizontalList" Version="1.0.2" />
+        <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.0.0.497661" />
     </ItemGroup>
 
-    <ItemGroup>
-        <Compile Include="MainActivity.cs"/>
-        <Compile Include="Resources\Resource.designer.cs"/>
-        <Compile Include="Properties\AssemblyInfo.cs"/>
-        <None Include="Properties\AndroidManifest.xml"/>
+    <ItemGroup Label="Special files">
+        <Compile Include="MainActivity.cs" />
+        <Compile Include="Resources\Resource.designer.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <None Include="Properties\AndroidManifest.xml" />
     </ItemGroup>
 
     <ItemGroup Label="Resources">
-        <AndroidResource Include="Resources\layout\Tabbar.axml"/>
-        <AndroidResource Include="Resources\layout\Toolbar.axml"/>
-        <AndroidResource Include="Resources\values\styles.xml"/>
-        <AndroidResource Include="Resources\values\colors.xml"/>
-        <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml"/>
-        <AndroidResource Include="Resources\mipmap-anydpi-v26\icon_round.xml"/>
-        <AndroidResource Include="Resources\mipmap-hdpi\icon.png"/>
-        <AndroidResource Include="Resources\mipmap-hdpi\launcher_foreground.png"/>
-        <AndroidResource Include="Resources\mipmap-mdpi\icon.png"/>
-        <AndroidResource Include="Resources\mipmap-mdpi\launcher_foreground.png"/>
-        <AndroidResource Include="Resources\mipmap-xhdpi\icon.png"/>
-        <AndroidResource Include="Resources\mipmap-xhdpi\launcher_foreground.png"/>
-        <AndroidResource Include="Resources\mipmap-xxhdpi\icon.png"/>
-        <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png"/>
-        <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png"/>
-        <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png"/>
+        <AndroidResource Include="Resources\layout\Tabbar.axml" />
+        <AndroidResource Include="Resources\layout\Toolbar.axml" />
+        <AndroidResource Include="Resources\values\styles.xml" />
+        <AndroidResource Include="Resources\values\colors.xml" />
+        <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
+        <AndroidResource Include="Resources\mipmap-anydpi-v26\icon_round.xml" />
+        <AndroidResource Include="Resources\mipmap-hdpi\icon.png" />
+        <AndroidResource Include="Resources\mipmap-hdpi\launcher_foreground.png" />
+        <AndroidResource Include="Resources\mipmap-mdpi\icon.png" />
+        <AndroidResource Include="Resources\mipmap-mdpi\launcher_foreground.png" />
+        <AndroidResource Include="Resources\mipmap-xhdpi\icon.png" />
+        <AndroidResource Include="Resources\mipmap-xhdpi\launcher_foreground.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\icon.png" />
+        <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
+        <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
+        <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
     </ItemGroup>
 
     <ItemGroup Label="Package References">
@@ -108,6 +108,6 @@
         </ProjectReference>
     </ItemGroup>
 
-    <Import Label="Xamarin.Android Import" Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets"/>
+    <Import Label="Xamarin.Android Import" Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
     
 </Project>

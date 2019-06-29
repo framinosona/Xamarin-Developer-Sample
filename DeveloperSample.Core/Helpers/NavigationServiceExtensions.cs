@@ -51,8 +51,6 @@ namespace DeveloperSample.Core.Helpers
                 Exception ex = new InvalidNavigationException();
                 if (navigationResult.Exception != null)
                     ex = navigationResult.Exception;
-                if (Debugger.IsAttached)
-                    throw ex;
                 SetMainPageFromException(ex);
             }
         }

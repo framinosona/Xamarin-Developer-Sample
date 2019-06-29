@@ -1,31 +1,33 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <basePageFiles:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
                                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                               xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-                               xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-                               xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                                xmlns:basePageFiles="clr-namespace:DeveloperSample.Core.Pages.BasePageFiles;assembly=DeveloperSample.Core"
-                               mc:Ignorable="d"
-                               mvvm:ViewModelLocator.AutowireViewModel="True"
                                x:Class="DeveloperSample.Core.Pages.MainPage.MainPage"
                                Title="{Binding Title}">
     <ContentPage.Content>
-        <StackLayout Margin="10"
-                     Spacing="10">
-            <Label Text="Drag and Drop Samples"
-                   Style="{DynamicResource TitleLabelStyle}" />
-            <Button Text="Sample 1 PanGesture"
-                    Command="{Binding NavigateToDragAndDropSample1}" />
-            <Button Text="Sample 2 TranslateTo"
-                    Command="{Binding NavigateToDragAndDropSample2}" />
-            <Button Text="Sample 3 Drop"
-                    Command="{Binding NavigateToDragAndDropSample3}" />
-            <Frame Style="{DynamicResource SeparatorStyle}" />
-            <Label Text="Color Samples"
-                   Style="{DynamicResource TitleLabelStyle}" />
-            <Button Text="Sample 1 RGB"
-                    Command="{Binding NavigateToColorSample1}" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout Margin="10"
+                         Spacing="10">
+                <Label Text="Drag and Drop Samples"
+                       Style="{DynamicResource TitleLabelStyle}" />
+                <Button Text="Sample 1 PanGesture"
+                        Command="{Binding NavigateToDragAndDropSample1}" />
+                <Button Text="Sample 2 TranslateTo"
+                        Command="{Binding NavigateToDragAndDropSample2}" />
+                <Button Text="Sample 3 Drop"
+                        Command="{Binding NavigateToDragAndDropSample3}" />
+                <Frame Style="{DynamicResource SeparatorStyle}" />
+                <Label Text="Color Samples"
+                       Style="{DynamicResource TitleLabelStyle}" />
+                <Button Text="Color selector"
+                        Command="{Binding NavigateToColorSample1}" />
+                <Frame Style="{DynamicResource SeparatorStyle}" />
+                <Label Text="Logging"
+                       Style="{DynamicResource TitleLabelStyle}" />
+                <Button Text="Sample Logging"
+                        Command="{Binding NavigateToLoggingSample}" />
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </basePageFiles:BaseContentPage>

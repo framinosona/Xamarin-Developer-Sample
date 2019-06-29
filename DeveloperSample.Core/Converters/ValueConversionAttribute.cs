@@ -11,6 +11,9 @@ namespace DeveloperSample.Core.Converters
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
     public class ValueConversionAttribute : Attribute
     {
+        public Type Input { get; }
+        public Type Output { get; }
+
         /// <summary>
         ///     Initializes a new instance of the <see cref="T:HelloMFractor.Converters.ValueConversionAttribute" /> class.
         /// </summary>
@@ -18,6 +21,8 @@ namespace DeveloperSample.Core.Converters
         /// <param name="output">The output type of the value converter.</param>
         public ValueConversionAttribute(Type input, Type output)
         {
+            Input = input;
+            Output = output;
         }
 
         /// <summary>

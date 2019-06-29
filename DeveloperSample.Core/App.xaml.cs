@@ -1,8 +1,10 @@
-﻿using DeveloperSample.Core.Helpers;
+using DeveloperSample.Core.Helpers;
+using DeveloperSample.Core.Pages.CarouselView.Sample1;
 using DeveloperSample.Core.Pages.Colors.Sample1;
 using DeveloperSample.Core.Pages.DragAndDrop.Sample1;
 using DeveloperSample.Core.Pages.DragAndDrop.Sample2;
 using DeveloperSample.Core.Pages.DragAndDrop.Sample3;
+using DeveloperSample.Core.Pages.Logging;
 using DeveloperSample.Core.Pages.MainPage;
 using Prism;
 using Prism.Ioc;
@@ -41,6 +43,7 @@ namespace DeveloperSample.Core
             containerRegistry.RegisterForNavigation<DragAndDropSample2Page>();
             containerRegistry.RegisterForNavigation<DragAndDropSample3Page>();
             containerRegistry.RegisterForNavigation<ColorSample1Page>();
+            containerRegistry.RegisterForNavigation<LoggingSamplePage>();
         }
 
         protected override async void OnInitialized()

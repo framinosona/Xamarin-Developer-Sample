@@ -1,0 +1,45 @@
+<basePageFiles:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                               xmlns:basePageFiles="clr-namespace:DeveloperSample.Core.Pages.BasePageFiles;assembly=DeveloperSample.Core"
+                               x:Class="DeveloperSample.Core.Pages.Logging.LoggingSamplePage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <StackLayout Margin="10"
+                     Spacing="10"
+                     Grid.Row="0">
+            <Button Text="Trace"
+                    BackgroundColor="Green"
+                    Command="{Binding AddTrace}" />
+            <Button Text="Info"
+                    BackgroundColor="Blue"
+                    Command="{Binding AddInfo}" />
+            <Button Text="Warn"
+                    BackgroundColor="Orange"
+                    Command="{Binding AddWarn}" />
+            <Button Text="Warn with Exception"
+                    BackgroundColor="Coral"
+                    Command="{Binding AddWarnWithException}" />
+            <Button Text="Error with Exception"
+                    BackgroundColor="Firebrick"
+                    Command="{Binding AddErrorWithException}" />
+        </StackLayout>
+        <Frame
+            Grid.Row="1"
+            BackgroundColor="Black"
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill">
+            <ScrollView>
+                <Label
+                    TextColor="GreenYellow"
+                    VerticalTextAlignment="Start"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill"
+                    Text="{Binding LogFileContent}"
+                    LineBreakMode="WordWrap" />
+            </ScrollView>
+        </Frame>
+    </Grid>
+</basePageFiles:BaseContentPage>

@@ -73,9 +73,9 @@
                     Grid.ColumnSpan="3"
                     Grid.Column="0">
             <StackLayout Spacing="10">
-                <components:ColorPickerRGB BindingContext="{Binding .}" />
-                <components:ColorPickerHSL BindingContext="{Binding .}" />
-                <components:ColorPickerCMYK BindingContext="{Binding .}" />
+                <components:ColorPickerRgb BindingContext="{Binding .}" />
+                <components:ColorPickerHsl BindingContext="{Binding .}" />
+                <components:ColorPickerCmyk BindingContext="{Binding .}" />
             </StackLayout>
         </ScrollView>
     </Grid>

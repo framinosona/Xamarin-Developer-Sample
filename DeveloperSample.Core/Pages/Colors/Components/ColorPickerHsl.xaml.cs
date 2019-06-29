@@ -3,9 +3,9 @@ using Xamarin.Forms;
 
 namespace DeveloperSample.Core.Pages.Colors.Components
 {
-    public partial class ColorPickerHSL
+    public partial class ColorPickerHsl
     {
-        public ColorPickerHSL()
+        public ColorPickerHsl()
         {
             InitializeComponent();
         }

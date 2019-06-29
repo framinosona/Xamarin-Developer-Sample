@@ -4,9 +4,9 @@ using Xamarin.Forms;
 
 namespace DeveloperSample.Core.Pages.Colors.Components
 {
-    public partial class ColorPickerCMYK : ContentView
+    public partial class ColorPickerCmyk
     {
-        public ColorPickerCMYK()
+        public ColorPickerCmyk()
         {
             InitializeComponent();
         }

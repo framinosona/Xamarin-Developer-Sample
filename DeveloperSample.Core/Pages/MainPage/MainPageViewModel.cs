@@ -1,10 +1,12 @@
 using System.Windows.Input;
 using DeveloperSample.Core.Helpers;
 using DeveloperSample.Core.Pages.BasePageFiles;
+using DeveloperSample.Core.Pages.CarouselView.Sample1;
 using DeveloperSample.Core.Pages.Colors.Sample1;
 using DeveloperSample.Core.Pages.DragAndDrop.Sample1;
 using DeveloperSample.Core.Pages.DragAndDrop.Sample2;
 using DeveloperSample.Core.Pages.DragAndDrop.Sample3;
+using DeveloperSample.Core.Pages.Logging;
 using Prism.Navigation;
 using Xamarin.Forms;
 
@@ -32,5 +34,8 @@ namespace DeveloperSample.Core.Pages.MainPage
         public ICommand NavigateToColorSample1 =>
             new Command(async () =>
                 await NavigationService.TryNavigateAsync($"{nameof(ColorSample1Page)}"));
+        public ICommand NavigateToLoggingSample =>
+            new Command(async () =>
+                await NavigationService.TryNavigateAsync($"{nameof(LoggingSamplePage)}"));
     }
 }
