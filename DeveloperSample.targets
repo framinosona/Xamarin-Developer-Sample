@@ -1,43 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-
     <PropertyGroup Label="Build">
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
-        <Configurations>Debug;Release</Configurations>
+        <Configurations>Debug;Release;AppCenter</Configurations>
         <Platforms>AnyCPU;iPhone;iPhoneSimulator</Platforms>
         <OutputPath>bin/$(Platform)/$(Configuration)</OutputPath>
         <LangVersion>latest</LangVersion>
     </PropertyGroup>
-
-    <PropertyGroup Label="Build Configuration Debug" Condition=" '$(Configuration)' == 'Debug' ">
+    <PropertyGroup Label="Build Configuration Debug"
+                   Condition=" '$(Configuration)' == 'Debug' ">
         <DefineConstants>DEBUG;TRACE</DefineConstants>
         <DebugType>full</DebugType>
         <Optimize>false</Optimize>
         <DebugSymbols>true</DebugSymbols>
     </PropertyGroup>
-    <PropertyGroup Label="Build Configuration Release" Condition=" '$(Configuration)' == 'Release' ">
+    <PropertyGroup Label="Build Configuration AppCenter"
+                   Condition=" '$(Configuration)' == 'AppCenter' ">
+        <ConfigurationGroup>Debug</ConfigurationGroup>
+        <DefineConstants>DEBUG;TRACE;APPCENTER</DefineConstants>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <DebugSymbols>true</DebugSymbols>
+    </PropertyGroup>
+    <PropertyGroup Label="Build Configuration Release"
+                   Condition=" '$(Configuration)' == 'Release' ">
         <DefineConstants>RELEASE</DefineConstants>
         <DebugType>pdbonly</DebugType>
         <Optimize>true</Optimize>
         <DebugSymbols>true</DebugSymbols>
     </PropertyGroup>
-
     <PropertyGroup Label="Hiding temp files">
         <DefaultItemExcludes>$(DefaultItemExcludes);**/*.*~;.DS_Store</DefaultItemExcludes>
     </PropertyGroup>
-    
     <ItemGroup>
         <EmbeddedResource Remove="**\Archive\**"/>
         <EmbeddedResource Remove="**\Archive\**"/>
     </ItemGroup>
-
     <ItemGroup>
         <Compile Remove="**\Archive\**"/>
         <Compile Remove="**\Archive\**"/>
     </ItemGroup>
-
     <ItemGroup>
         <None Remove="**\Archive\**"/>
         <None Remove="**\Archive\**"/>
     </ItemGroup>
-</Project> 
+</Project>

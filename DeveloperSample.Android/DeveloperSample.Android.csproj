@@ -20,6 +20,10 @@
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
   </PropertyGroup>
+  <PropertyGroup Label="Build Configuration AppCenter" Condition=" '$(Configuration)' == 'AppCenter' ">
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
   <PropertyGroup Label="Build Configuration Debug" Condition=" '$(Configuration)' == 'Debug' ">
     <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
@@ -29,9 +33,7 @@
   </PropertyGroup>
   <PropertyGroup Label="Build Platform AnyCPU" Condition=" '$(Platform)' == 'AnyCPU' ">
   </PropertyGroup>
-  <PropertyGroup Label="Build Platform iPhone" Condition=" '$(Platform)' == 'iPhone' ">
-  </PropertyGroup>
-  <PropertyGroup Label="Build Platform iPhoneSimulator" Condition=" '$(Platform)' == 'iPhoneSimulator' ">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppCenter|AnyCPU' ">
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
   </PropertyGroup>
@@ -53,7 +55,7 @@
     <PackageReference Include="Prism.Core" Version="7.1.0.431" />
     <PackageReference Include="Prism.Forms" Version="7.1.0.431" />
     <PackageReference Include="Prism.Unity.Forms" Version="7.1.0.431" />
-    <PackageReference Include="Xamarin.Forms" Version="4.0.0.497661" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.555618" />
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.1" />
     <PackageReference Include="Xamarin.Android.Support.v4" Version="28.0.0.1" />
@@ -65,9 +67,9 @@
     <PackageReference Include="Xamarin.Forms.ConvertersPack" Version="1.0.0" />
     <PackageReference Include="Xamarin.Forms.DebugRainbows" Version="365.0.0" />
     <PackageReference Include="Xamarin.Forms.InputKit" Version="3.0.11" />
-    <PackageReference Include="Xamarin.Forms.PancakeView" Version="1.0.21" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="1.0.22" />
     <PackageReference Include="Xamarin.Forms.Plugin.HorizontalList" Version="1.0.2" />
-    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.0.0.497661" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.1.0.555618" />
   </ItemGroup>
   <ItemGroup Label="Special files">
     <Compile Include="MainActivity.cs" />
