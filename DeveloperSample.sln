@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeveloperSample.Android", "DeveloperSample.Android\DeveloperSample.Android.csproj", "{74AAC01F-8338-413B-BFD7-4D5843DC35DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeveloperSample.Droid", "DeveloperSample.Droid\DeveloperSample.Droid.csproj", "{74AAC01F-8338-413B-BFD7-4D5843DC35DE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeveloperSample.iOS", "DeveloperSample.iOS\DeveloperSample.iOS.csproj", "{86EAE4C8-C4B7-47E2-874F-3FFC4A3F8CB2}"
 EndProject
@@ -35,13 +35,9 @@ Global
 		{74AAC01F-8338-413B-BFD7-4D5843DC35DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74AAC01F-8338-413B-BFD7-4D5843DC35DE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{74AAC01F-8338-413B-BFD7-4D5843DC35DE}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{74AAC01F-8338-413B-BFD7-4D5843DC35DE}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
 		{74AAC01F-8338-413B-BFD7-4D5843DC35DE}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{74AAC01F-8338-413B-BFD7-4D5843DC35DE}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{74AAC01F-8338-413B-BFD7-4D5843DC35DE}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{74AAC01F-8338-413B-BFD7-4D5843DC35DE}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{74AAC01F-8338-413B-BFD7-4D5843DC35DE}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{74AAC01F-8338-413B-BFD7-4D5843DC35DE}.Release|iPhone.Build.0 = Release|Any CPU
 		{86EAE4C8-C4B7-47E2-874F-3FFC4A3F8CB2}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
 		{86EAE4C8-C4B7-47E2-874F-3FFC4A3F8CB2}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{86EAE4C8-C4B7-47E2-874F-3FFC4A3F8CB2}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
