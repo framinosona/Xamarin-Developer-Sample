@@ -56,7 +56,7 @@
   </PropertyGroup>
   <ItemGroup Label="Special files">
     <Compile Include="Helpers\StatusBarNavigationRendrerer.cs" />
-    <Compile Include="Helpers\StatusBarPageRenderer.cs" />
+    <Compile Include="Helpers\StatusBarRenderer.cs" />
     <Compile Include="IosInitializer.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />

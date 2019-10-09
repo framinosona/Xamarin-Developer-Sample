@@ -3,7 +3,6 @@ using DeveloperSample.Core.Pages.StatusBar;
 using DeveloperSample.iOS.Helpers.StatusBar;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
-using UIKit;
 
 
 [assembly: ExportRenderer(typeof(ContentPage), typeof(StatusBarNavigationRendrerer))]
