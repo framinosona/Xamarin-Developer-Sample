@@ -18,7 +18,7 @@
   </PropertyGroup>
   <ItemGroup Label="Package References">
     <PackageReference Include="NUnit" Version="3.12.0" />
-    <PackageReference Include="Xamarin.UITest" Version="3.0.0" />
+    <PackageReference Include="Xamarin.UITest" Version="3.0.3" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

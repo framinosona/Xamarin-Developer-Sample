@@ -27,6 +27,11 @@
                        Style="{DynamicResource TitleLabelStyle}" />
                 <Button Text="Sample Logging"
                         Command="{Binding NavigateToLoggingSample}" />
+                <Frame Style="{DynamicResource SeparatorStyle}" />
+                <Label Text="StatusBar"
+                       Style="{DynamicResource TitleLabelStyle}" />
+                <Button Text="Sample StatusBar"
+                        Command="{Binding NavigateToStatusBarSample}" />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

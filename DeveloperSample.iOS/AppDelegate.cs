@@ -23,7 +23,7 @@ namespace DeveloperSample.iOS
             Xamarin.Forms.Forms.SetFlags(new[] { "CollectionView_Experimental", "Shell_Experimental" });
             Xamarin.Forms.Forms.Init();
             LoadApplication(new App(new IosInitializer()));
-
+            
             return base.FinishedLaunching(app, options);
         }
     }

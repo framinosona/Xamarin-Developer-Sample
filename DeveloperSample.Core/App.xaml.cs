@@ -5,6 +5,7 @@ using DeveloperSample.Core.Pages.DragAndDrop.Sample2;
 using DeveloperSample.Core.Pages.DragAndDrop.Sample3;
 using DeveloperSample.Core.Pages.Logging;
 using DeveloperSample.Core.Pages.MainPage;
+using DeveloperSample.Core.Pages.StatusBar;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
@@ -49,6 +50,10 @@ namespace DeveloperSample.Core
             containerRegistry.RegisterForNavigation<DragAndDropSample3Page>();
             containerRegistry.RegisterForNavigation<ColorSample1Page>();
             containerRegistry.RegisterForNavigation<LoggingSamplePage>();
+            containerRegistry.RegisterForNavigation<StatusBarSamplePage>();
+            containerRegistry.RegisterForNavigation<StatusBarDarkBackgroundPage>();
+            containerRegistry.RegisterForNavigation<StatusBarLightBackgroundPage>();
+            containerRegistry.RegisterForNavigation<StatusBarVideoBackgroundPage>();
         }
 
         protected override async void OnInitialized()
