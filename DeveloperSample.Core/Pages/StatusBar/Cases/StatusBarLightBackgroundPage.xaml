@@ -3,7 +3,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:statusBar="clr-namespace:DeveloperSample.Core.Pages.StatusBar;assembly=DeveloperSample.Core"
-             x:Class="DeveloperSample.Core.Pages.StatusBar.StatusBarLightBackgroundPage"
+             x:Class="DeveloperSample.Core.Pages.StatusBar.Cases.StatusBarLightBackgroundPage"
              BackgroundColor="White"
              NavigationPage.HasNavigationBar="False"
              statusBar:StatusBar.StatusBarStyle="DarkText">

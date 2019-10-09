@@ -6,6 +6,7 @@ using DeveloperSample.Core.Pages.DragAndDrop.Sample3;
 using DeveloperSample.Core.Pages.Logging;
 using DeveloperSample.Core.Pages.MainPage;
 using DeveloperSample.Core.Pages.StatusBar;
+using DeveloperSample.Core.Pages.StatusBar.Cases;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;

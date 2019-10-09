@@ -1,6 +1,6 @@
 ﻿using Prism.Navigation;
 
-namespace DeveloperSample.Core.Pages.StatusBar
+namespace DeveloperSample.Core.Pages.StatusBar.Cases
 {
     public class StatusBarDarkBackgroundPageViewModel : BaseStatusBarPageViewModel
     { 

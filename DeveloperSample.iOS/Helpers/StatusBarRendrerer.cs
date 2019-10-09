@@ -1,15 +1,23 @@
 using System;
 using DeveloperSample.Core.Pages.StatusBar;
-using DeveloperSample.iOS.Helpers.StatusBar;
+using DeveloperSample.iOS.Helpers;
 using UIKit;
 using Xamarin.Forms;
+using Xamarin.Forms.Platform.iOS;
 
-[assembly: Dependency(typeof(StatusBarRenderer))]
-namespace DeveloperSample.iOS.Helpers.StatusBar
+[assembly: ExportRenderer(typeof(Page), typeof(StatusBarRendrerer))]
+
+namespace DeveloperSample.iOS.Helpers
 {
-    public class StatusBarRenderer : IStatusBarRenderer
+    public class StatusBarRendrerer : PageRenderer
     {
-        public void SetStatusBarStyle(StatusBarStyle statusBarStyle)
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+            SetStatusBarStyle(StatusBar.GetStatusBarStyle(Element));
+        }
+
+        private void SetStatusBarStyle(StatusBarStyle statusBarStyle)
         {
             switch (statusBarStyle)
             {
@@ -31,23 +39,7 @@ namespace DeveloperSample.iOS.Helpers.StatusBar
                     break;
             }
 
-            GetCurrentViewController()?.SetNeedsStatusBarAppearanceUpdate();
-        }
-        
-        UIViewController GetCurrentViewController()
-        {
-            try
-            {
-                var window = UIApplication.SharedApplication.KeyWindow;
-                var vc = window.RootViewController;
-                while (vc.PresentedViewController != null)
-                    vc = vc.PresentedViewController;
-                return vc;
-            }
-            catch (Exception e)
-            {
-                return null;
-            }
+            SetNeedsStatusBarAppearanceUpdate();
         }
     }
 }

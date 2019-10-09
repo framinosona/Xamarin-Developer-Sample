@@ -1,6 +1,7 @@
 using System.Windows.Input;
 using DeveloperSample.Core.Helpers;
 using DeveloperSample.Core.Pages.BasePageFiles;
+using DeveloperSample.Core.Pages.StatusBar.Cases;
 using Prism.Navigation;
 using Xamarin.Forms;
 

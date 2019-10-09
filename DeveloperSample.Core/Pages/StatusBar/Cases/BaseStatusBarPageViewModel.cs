@@ -4,7 +4,7 @@ using DeveloperSample.Core.Pages.BasePageFiles;
 using Prism.Navigation;
 using Xamarin.Forms;
 
-namespace DeveloperSample.Core.Pages.StatusBar
+namespace DeveloperSample.Core.Pages.StatusBar.Cases
 {
     public class BaseStatusBarPageViewModel : BaseViewModel
     {
