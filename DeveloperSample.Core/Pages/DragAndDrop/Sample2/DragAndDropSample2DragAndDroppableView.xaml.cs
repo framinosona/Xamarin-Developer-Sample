@@ -30,8 +30,8 @@ namespace DeveloperSample.Core.Pages.DragAndDrop.Sample2
             {
                 // Move view
                 case GestureStatus.Running:
-                    TranslationX = TranslationX + e.TotalX;
-                    TranslationY = TranslationY + e.TotalY;
+                    TranslationX = (Device.RuntimePlatform == Device.Android ? TranslationX : 0) + e.TotalX;
+                    TranslationY = (Device.RuntimePlatform == Device.Android ? TranslationY : 0) + e.TotalY;
                     TotalXLabel.Text = Math.Round(TranslationX, 1).ToString(CultureInfo.InvariantCulture);
                     TotalYLabel.Text = Math.Round(TranslationY, 1).ToString(CultureInfo.InvariantCulture);
                     ViewXLabel.Text = Math.Round(screenCoordinates.X + TranslationX + Width / 2, 1).ToString(CultureInfo.InvariantCulture);

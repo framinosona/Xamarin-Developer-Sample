@@ -49,10 +49,10 @@ namespace DeveloperSample.Core.Pages.DragAndDrop.Sample3.Extensions
             switch (e.StatusType)
             {
                 case GestureStatus.Running:
-                    visualElement.TranslationX = visualElement.TranslationX + e.TotalX;
-                    visualElement.TranslationY = visualElement.TranslationY + e.TotalY;
-                    dragAndDropMovingView.ScreenX = screenCoordinates.X + visualElement.TranslationX + visualElement.Width / 2;
-                    dragAndDropMovingView.ScreenY = screenCoordinates.Y + visualElement.TranslationY + visualElement.Height / 2;
+                    visualElement.TranslationX = (Device.RuntimePlatform == Device.Android ? visualElement.TranslationX : 0) + e.TotalX;
+                    visualElement.TranslationY = (Device.RuntimePlatform == Device.Android ? visualElement.TranslationY : 0) + e.TotalY;
+                    dragAndDropMovingView.ScreenX = screenCoordinates.X + (Device.RuntimePlatform == Device.Android ? visualElement.TranslationX : 0) + e.TotalX + visualElement.Width / 2;
+                    dragAndDropMovingView.ScreenY = screenCoordinates.Y + (Device.RuntimePlatform == Device.Android ? visualElement.TranslationY : 0) + e.TotalY + visualElement.Height / 2;
                     break;
                 case GestureStatus.Completed:
                 case GestureStatus.Canceled:
