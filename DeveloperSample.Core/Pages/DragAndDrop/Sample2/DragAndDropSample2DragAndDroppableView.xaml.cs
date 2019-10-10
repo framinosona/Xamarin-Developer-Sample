@@ -23,25 +23,27 @@ namespace DeveloperSample.Core.Pages.DragAndDrop.Sample2
         private void PanGestureRecognizer_PanUpdated(object sender, PanUpdatedEventArgs e)
         {
             StatusLabel.Text = e.StatusType.ToString();
-            TotalXLabel.Text = Math.Round(e.TotalX, 1).ToString(CultureInfo.InvariantCulture);
-            TotalYLabel.Text = Math.Round(e.TotalY, 1).ToString(CultureInfo.InvariantCulture);
-
 // Coordinate of center = Initial position of top left corner + Pan transformation + Size / 2 
             var screenCoordinates = this.GetScreenCoordinates();
-            ViewXLabel.Text = Math.Round(screenCoordinates.X + e.TotalX + Width / 2, 1)
-                .ToString(CultureInfo.InvariantCulture);
-            ViewYLabel.Text = Math.Round(screenCoordinates.Y + e.TotalY + Height / 2, 1)
-                .ToString(CultureInfo.InvariantCulture);
 
             switch (e.StatusType)
             {
                 // Move view
                 case GestureStatus.Running:
-                    this.TranslateTo(e.TotalX, e.TotalY, 16); // 1000/16=62,5fps
+                    TranslationX = TranslationX + e.TotalX;
+                    TranslationY = TranslationY + e.TotalY;
+                    TotalXLabel.Text = Math.Round(TranslationX, 1).ToString(CultureInfo.InvariantCulture);
+                    TotalYLabel.Text = Math.Round(TranslationY, 1).ToString(CultureInfo.InvariantCulture);
+                    ViewXLabel.Text = Math.Round(screenCoordinates.X + TranslationX + Width / 2, 1).ToString(CultureInfo.InvariantCulture);
+                    ViewYLabel.Text = Math.Round(screenCoordinates.Y + TranslationY + Height / 2, 1).ToString(CultureInfo.InvariantCulture);
                     break;
                 case GestureStatus.Completed:
                 case GestureStatus.Canceled:
                     this.TranslateTo(0, 0, 200);
+                    TotalXLabel.Text = "0";
+                    TotalYLabel.Text = "0";
+                    ViewXLabel.Text = Math.Round(screenCoordinates.X + Width / 2, 1).ToString(CultureInfo.InvariantCulture);
+                    ViewYLabel.Text = Math.Round(screenCoordinates.Y + Height / 2, 1).ToString(CultureInfo.InvariantCulture);
                     break;
                 case GestureStatus.Started:
                     break;

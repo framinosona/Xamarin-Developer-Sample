@@ -44,17 +44,23 @@ namespace DeveloperSample.Core.Pages.DragAndDrop.Sample3.Extensions
                 dropContainer?.DragAndDroppableViewDropped(dragAndDropMovingView);
 
             // Coordinate of center = Initial position of top left corner + Pan transformation + Size / 2 
-            var (x, y) = visualElement.GetScreenCoordinates();
-            dragAndDropMovingView.ScreenX = x + e.TotalX + visualElement.Width / 2;
-            dragAndDropMovingView.ScreenY = y + e.TotalY + visualElement.Height / 2;
+            var screenCoordinates = visualElement.GetScreenCoordinates();
 
-            // Move view
-            if (e.StatusType == GestureStatus.Running)
-                visualElement.TranslateTo(e.TotalX, e.TotalY, 16); // 1000/16=62,5fps
-
-            // Navigation back
-            else if (e.StatusType == GestureStatus.Completed || e.StatusType == GestureStatus.Canceled)
-                visualElement.TranslateTo(0, 0, 200);
+            switch (e.StatusType)
+            {
+                case GestureStatus.Running:
+                    visualElement.TranslationX = visualElement.TranslationX + e.TotalX;
+                    visualElement.TranslationY = visualElement.TranslationY + e.TotalY;
+                    dragAndDropMovingView.ScreenX = screenCoordinates.X + visualElement.TranslationX + visualElement.Width / 2;
+                    dragAndDropMovingView.ScreenY = screenCoordinates.Y + visualElement.TranslationY + visualElement.Height / 2;
+                    break;
+                case GestureStatus.Completed:
+                case GestureStatus.Canceled:
+                    visualElement.TranslateTo(0, 0, 200);
+                    dragAndDropMovingView.ScreenX = screenCoordinates.X + visualElement.Width / 2;
+                    dragAndDropMovingView.ScreenY = screenCoordinates.Y + visualElement.Height / 2;
+                    break;
+            }
 
             // Update on Hover
             dropContainer?.UpdateHoverStatuses();
