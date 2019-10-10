@@ -52,9 +52,9 @@ namespace DeveloperSample.Core
             containerRegistry.RegisterForNavigation<ColorSample1Page>();
             containerRegistry.RegisterForNavigation<LoggingSamplePage>();
             containerRegistry.RegisterForNavigation<StatusBarSamplePage>();
-            containerRegistry.RegisterForNavigation<StatusBarDarkBackgroundPage>();
-            containerRegistry.RegisterForNavigation<StatusBarLightBackgroundPage>();
-            containerRegistry.RegisterForNavigation<StatusBarVideoBackgroundPage>();
+            containerRegistry.RegisterForNavigation<StatusBarDarkBackgroundPage, BaseStatusBarPageViewModel>();
+            containerRegistry.RegisterForNavigation<StatusBarLightBackgroundPage, BaseStatusBarPageViewModel>();
+            containerRegistry.RegisterForNavigation<StatusBarVideoBackgroundPage, BaseStatusBarPageViewModel>();
         }
 
         protected override async void OnInitialized()
