@@ -55,7 +55,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
   </PropertyGroup>
   <ItemGroup Label="Special files">
-    <Compile Include="Helpers\StatusBarRendrerer.cs" />
+    <Compile Include="Helpers\StatusBarRenderer.cs" />
     <Compile Include="IosInitializer.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />

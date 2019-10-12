@@ -5,11 +5,11 @@ using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
-[assembly: ExportRenderer(typeof(Page), typeof(StatusBarRendrerer))]
+[assembly: ExportRenderer(typeof(Page), typeof(StatusBarRenderer))]
 
 namespace DeveloperSample.iOS.Helpers
 {
-    public class StatusBarRendrerer : PageRenderer
+    public class StatusBarRenderer : PageRenderer
     {
         public override void ViewWillAppear(bool animated)
         {
