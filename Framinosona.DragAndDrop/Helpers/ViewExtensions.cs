@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Xamarin.Forms;
 
-namespace DeveloperSample.Core.Helpers
+namespace Framinosona.DragAndDrop.Helpers
 {
     public static class ViewExtensions
     {
@@ -51,7 +51,7 @@ namespace DeveloperSample.Core.Helpers
             var screenCoordinateY = view.Y;
 
             // Get the view's parent (if it has one...)
-            if (view.Parent.GetType() != typeof(App))
+            if (view.Parent.GetType() != typeof(Application))
             {
                 var parent = (VisualElement) view.Parent;
 
@@ -63,7 +63,7 @@ namespace DeveloperSample.Core.Helpers
                     screenCoordinateY += parent.Y;
 
                     // If the parent of this parent isn't the app itself, get the parent's parent.
-                    if (parent.Parent.GetType() == typeof(App))
+                    if (parent.Parent.GetType() == typeof(Application))
                         parent = null;
                     else
                         parent = (VisualElement) parent.Parent;

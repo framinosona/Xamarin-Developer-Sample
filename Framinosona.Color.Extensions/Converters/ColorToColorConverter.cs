@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Globalization;
-using DeveloperSample.Core.Helpers;
 using Xamarin.Forms;
 
-namespace DeveloperSample.Core.Converters
+namespace Framinosona.Color.Extensions.Converters
 {
     public abstract class BaseColorToColorConverter : IValueConverter
     {
@@ -15,39 +14,39 @@ namespace DeveloperSample.Core.Converters
         }
     }
 
-    [ValueConversion(typeof(Color), typeof(Color))]
+    [ValueConversion(typeof(Xamarin.Forms.Color), typeof(Xamarin.Forms.Color))]
     public class ColorToBlackOrWhiteConverter : BaseColorToColorConverter
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return value is Color input ? input.ToBlackOrWhite() : Color.Black;
+            return value is Xamarin.Forms.Color input ? input.ToBlackOrWhite() : Xamarin.Forms.Color.Black;
         }
     }
 
-    [ValueConversion(typeof(Color), typeof(Color))]
+    [ValueConversion(typeof(Xamarin.Forms.Color), typeof(Xamarin.Forms.Color))]
     public class ColorToColorForTextConverter : BaseColorToColorConverter
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return value is Color input ? input.ToBlackOrWhiteForText() : Color.Black;
+            return value is Xamarin.Forms.Color input ? input.ToBlackOrWhiteForText() : Xamarin.Forms.Color.Black;
         }
     }
 
-    [ValueConversion(typeof(Color), typeof(Color))]
+    [ValueConversion(typeof(Xamarin.Forms.Color), typeof(Xamarin.Forms.Color))]
     public class ColorToGrayScaleColorConverter : BaseColorToColorConverter
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return value is Color input ? input.ToGrayScale() : Color.Black;
+            return value is Xamarin.Forms.Color input ? input.ToGrayScale() : Xamarin.Forms.Color.Black;
         }
     }
 
-    [ValueConversion(typeof(Color), typeof(Color))]
+    [ValueConversion(typeof(Xamarin.Forms.Color), typeof(Xamarin.Forms.Color))]
     public class ColorToInverseColorConverter : BaseColorToColorConverter
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return value is Color input ? input.Inverse() : Color.Black;
+            return value is Xamarin.Forms.Color input ? input.Inverse() : Xamarin.Forms.Color.Black;
         }
     }
 }

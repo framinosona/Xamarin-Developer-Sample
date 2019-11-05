@@ -1,16 +1,15 @@
-using System;
-using DeveloperSample.Core.Pages.StatusBar;
-using DeveloperSample.iOS.Helpers;
+using Framinosona.StatusBar;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(Page), typeof(StatusBarRenderer))]
 
-namespace DeveloperSample.iOS.Helpers
+namespace Framinosona.StatusBar
 {
     public class StatusBarRenderer : PageRenderer
     {
+
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);

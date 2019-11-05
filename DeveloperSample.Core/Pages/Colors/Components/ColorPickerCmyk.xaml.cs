@@ -1,5 +1,6 @@
 using DeveloperSample.Core.Helpers;
 using DeveloperSample.Core.Pages.Colors.Sample1;
+using Framinosona.Color.Extensions;
 using Xamarin.Forms;
 
 namespace DeveloperSample.Core.Pages.Colors.Components

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using DeveloperSample.Core.Pages.DragAndDrop.Sample3.Interfaces;
+using Framinosona.DragAndDrop.Interfaces;
 using Xamarin.Forms;
 
 namespace DeveloperSample.Core.Pages.DragAndDrop.Sample3.Components

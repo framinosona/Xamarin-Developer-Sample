@@ -1,0 +1,122 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup Label="Build">
+        <TargetFrameworks Condition=" '$(TargetFrameworks)' == '' ">netstandard2.0;monoandroid90;xamarinios10</TargetFrameworks>
+        <AssemblyName>Framinosona.DragAndDrop</AssemblyName>
+        <RootNamespace>$(AssemblyName)</RootNamespace>
+        <PackageId>$(AssemblyName)</PackageId>
+        <Title>$(AssemblyName)</Title>
+
+        <Description>$(AssemblyName): a kit of interfaces and functions to add Drag and Drop interaction in your Xamarin.Forms Apps</Description>
+        <Summary>$(Description)</Summary>
+
+        <Product>$(AssemblyName) ($(TargetFramework))</Product>
+
+        <Version>1.0.0</Version>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
+        <PackageVersion>$(Version)$(VersionSuffix)</PackageVersion>
+
+        <Me>Francois Raminosona</Me>
+        <Authors>$(Me)</Authors>
+        <Owners>$(Me)</Owners>
+        <Copyright>$(Me)</Copyright>
+        <Company>$(Me)</Company>
+
+        <NeutralLanguage>en</NeutralLanguage>
+        <LangVersion>latest</LangVersion>
+        <UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
+        <DebugType>portable</DebugType>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <Configurations>Debug;Release</Configurations>
+        <Platforms>AnyCPU</Platforms>
+        <OutputPath>bin\</OutputPath>
+        <PackageTags>drag, drop, draganddrop, xamarin, xamarin.forms, toolkit, kit</PackageTags>
+        <RepositoryUrl></RepositoryUrl>
+        <DependsOnNETStandard>true</DependsOnNETStandard>
+    </PropertyGroup>
+    <PropertyGroup Label="Build Configuration Debug" Condition=" '$(Configuration)' == 'Debug' ">
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <Optimize>false</Optimize>
+        <DebugSymbols>true</DebugSymbols>
+    </PropertyGroup>
+    <PropertyGroup Label="Build Configuration Release" Condition=" '$(Configuration)' == 'Release' ">
+        <DefineConstants>RELEASE</DefineConstants>
+        <Optimize>true</Optimize>
+        <DebugSymbols>true</DebugSymbols>
+    </PropertyGroup>
+    <PropertyGroup Label="Hiding temp files">
+        <DefaultItemExcludes>$(DefaultItemExcludes);**/*.*~;.DS_Store</DefaultItemExcludes>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+        <DefineConstants>$(DefineConstants);NETSTANDARD2_0</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(TargetFramework)' == 'monoandroid90' ">
+        <TargetFrameworkIdentifier>MonoAndroid</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+        <LanguageTargets Condition="Exists('$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets')">$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets</LanguageTargets>
+        <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+        <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+        <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+        <DefineConstants>$(DefineConstants);__ANDROID__</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(TargetFramework)' == 'xamarinios10' ">
+        <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
+        <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+        <LanguageTargets Condition="Exists('$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets')">$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets</LanguageTargets>
+        <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+        <DefineConstants>$(DefineConstants);__IOS__</DefineConstants>
+        <CodesignKey>iPhone Developer</CodesignKey>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Remove="**\*.netstandard.cs" />
+        <Compile Remove="**\*.android.cs" />
+        <Compile Remove="**\*.ios.cs" />
+        <Compile Remove="**\Android\**" />
+        <Compile Remove="**\Ios\**" />
+        <Compile Remove="**\NetStandard\**" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+        <Compile Include="**\*.netstandard.cs" />
+        <Compile Include="NetStandard\**" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(TargetFramework)' == 'monoandroid90' ">
+        <Compile Include="**\*.android.cs" />
+        <Compile Include="Android\**" />
+        <Reference Include="mscorlib" />
+        <Reference Include="Mono.Android" />
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Xml.Linq" />
+        <Reference Include="System.Xml" />
+        <Reference Include="netstandard" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'xamarinios10' ">
+        <Compile Include="**\*.ios.cs" />
+        <Compile Include="Ios\**" />
+        <Reference Include="mscorlib" />
+        <Reference Include="System" />
+        <Reference Include="System.Xml" />
+        <Reference Include="System.Core" />
+        <Reference Include="Xamarin.iOS" />
+        <Reference Include="netstandard" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Remove="**\Archive\**" />
+        <Compile Remove="**\Archive\**" />
+        <None Remove="**\Archive\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Xamarin.Forms" Version="4.2.0.848062" />
+    </ItemGroup>
+
+</Project>

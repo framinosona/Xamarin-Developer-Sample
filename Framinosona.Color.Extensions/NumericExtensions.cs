@@ -1,6 +1,6 @@
 using System;
 
-namespace DeveloperSample.Core.Helpers
+namespace Framinosona.Color.Extensions
 {
     public static class NumericExtensions
     {

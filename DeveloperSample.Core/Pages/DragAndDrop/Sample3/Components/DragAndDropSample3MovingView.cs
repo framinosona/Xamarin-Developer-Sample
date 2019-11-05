@@ -1,5 +1,6 @@
-using DeveloperSample.Core.Pages.DragAndDrop.Sample3.Extensions;
-using DeveloperSample.Core.Pages.DragAndDrop.Sample3.Interfaces;
+using System;
+using Framinosona.DragAndDrop.Extensions;
+using Framinosona.DragAndDrop.Interfaces;
 using Xamarin.Forms;
 
 namespace DeveloperSample.Core.Pages.DragAndDrop.Sample3.Components

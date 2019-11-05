@@ -1,4 +1,4 @@
-using DeveloperSample.Core.Pages.DragAndDrop.Sample3.Interfaces;
+using Framinosona.DragAndDrop.Interfaces;
 
 namespace DeveloperSample.Core.Pages.DragAndDrop.Sample3
 {

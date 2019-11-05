@@ -1,10 +1,10 @@
 using System;
 using System.Linq;
-using DeveloperSample.Core.Helpers;
-using DeveloperSample.Core.Pages.DragAndDrop.Sample3.Interfaces;
+using Framinosona.DragAndDrop.Helpers;
+using Framinosona.DragAndDrop.Interfaces;
 using Xamarin.Forms;
 
-namespace DeveloperSample.Core.Pages.DragAndDrop.Sample3.Extensions
+namespace Framinosona.DragAndDrop.Extensions
 {
     public static class DragAndDropExtensions
     {

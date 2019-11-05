@@ -2,7 +2,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration;
 using Page = Xamarin.Forms.Page;
 
-namespace DeveloperSample.Core.Pages.StatusBar
+namespace Framinosona.StatusBar
 {
     public enum StatusBarStyle
     {
@@ -25,6 +25,7 @@ namespace DeveloperSample.Core.Pages.StatusBar
             typeof(StatusBarStyle),
             typeof(Page),
             StatusBarStyle.Default);
+
 
         public static void SetStatusBarStyle(BindableObject page, StatusBarStyle value) => page.SetValue(StatusBarStyleProperty, value);
         public static StatusBarStyle GetStatusBarStyle(BindableObject page) => (StatusBarStyle) page.GetValue(StatusBarStyleProperty);

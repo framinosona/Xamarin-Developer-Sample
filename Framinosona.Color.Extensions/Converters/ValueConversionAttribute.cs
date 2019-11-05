@@ -1,6 +1,6 @@
 using System;
 
-namespace DeveloperSample.Core.Converters
+namespace Framinosona.Color.Extensions.Converters
 {
     /// <summary>
     ///     When annotated onto an <see cref="Xamarin.Forms.IValueConverter" /> implementation, enables third party tools to

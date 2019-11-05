@@ -1,6 +1,7 @@
 using System;
 using System.Globalization;
 using DeveloperSample.Core.Helpers;
+using Framinosona.DragAndDrop.Helpers;
 using Xamarin.Forms;
 
 namespace DeveloperSample.Core.Pages.DragAndDrop.Sample2

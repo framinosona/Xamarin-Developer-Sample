@@ -1,9 +1,8 @@
 using System;
 using System.Globalization;
-using DeveloperSample.Core.Helpers;
 using Xamarin.Forms;
 
-namespace DeveloperSample.Core.Converters
+namespace Framinosona.Color.Extensions.Converters
 {
     public abstract class BaseColorToStringConverter : IValueConverter
     {
@@ -15,57 +14,57 @@ namespace DeveloperSample.Core.Converters
         }
     }
 
-    [ValueConversion(typeof(Color), typeof(string))]
+    [ValueConversion(typeof(Xamarin.Forms.Color), typeof(string))]
     public class ColorToRgbStringConverter : BaseColorToColorConverter
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return value is Color input ? input.ToRgbString() : "";
+            return value is Xamarin.Forms.Color input ? input.ToRgbString() : "";
         }
     }
 
-    [ValueConversion(typeof(Color), typeof(string))]
+    [ValueConversion(typeof(Xamarin.Forms.Color), typeof(string))]
     public class ColorToRgbaStringConverter : BaseColorToColorConverter
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return value is Color input ? input.ToRgbaString() : "";
+            return value is Xamarin.Forms.Color input ? input.ToRgbaString() : "";
         }
     }
 
-    [ValueConversion(typeof(Color), typeof(string))]
+    [ValueConversion(typeof(Xamarin.Forms.Color), typeof(string))]
     public class ColorToHexRgbStringConverter : BaseColorToColorConverter
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return value is Color input ? input.ToHexRgbString() : "";
+            return value is Xamarin.Forms.Color input ? input.ToHexRgbString() : "";
         }
     }
 
-    [ValueConversion(typeof(Color), typeof(string))]
+    [ValueConversion(typeof(Xamarin.Forms.Color), typeof(string))]
     public class ColorToHexRgbaStringConverter : BaseColorToColorConverter
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return value is Color input ? input.ToHexRgbaString() : "";
+            return value is Xamarin.Forms.Color input ? input.ToHexRgbaString() : "";
         }
     }
 
-    [ValueConversion(typeof(Color), typeof(string))]
+    [ValueConversion(typeof(Xamarin.Forms.Color), typeof(string))]
     public class ColorToCmyStringConverter : BaseColorToColorConverter
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return value is Color input ? input.ToCmyString() : "";
+            return value is Xamarin.Forms.Color input ? input.ToCmyString() : "";
         }
     }
 
-    [ValueConversion(typeof(Color), typeof(string))]
+    [ValueConversion(typeof(Xamarin.Forms.Color), typeof(string))]
     public class ColorToCmykStringConverter : BaseColorToColorConverter
     {
         public override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return value is Color input ? input.ToCmykString() : "";
+            return value is Xamarin.Forms.Color input ? input.ToCmykString() : "";
         }
     }
 }
